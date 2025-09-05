@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header class="app-header">
+            <div class="brand">Quiz</div>
+            <div class="controls">
+                <button id="back-btn" class="ghost">⟵ Back</button>
+            </div>
+        </header>
+        <main class="board" aria-live="polite">
+            <section class="question-card" id="question-card">
+                <div class="quiz-header">
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <span class="progress-text" id="progress-text">1/10</span>
+                    </div>
+                    <div class="timer-container">
+                        <div class="timer-circle" id="timer-circle">
+                            <span class="timer-text" id="timer-text">30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="meta">
+                    <span id="counter">1 / 10</span>
+                    <span id="streak">Streak: 0</span>
+                </div>
+                <h1 class="question" id="question-text">Loading…</h1>
+                <div class="options" id="options"></div>
+            </section>
+            <div id="confetti-root" class="confetti-burst" aria-hidden="true"></div>
+            <div id="celebrate-overlay" class="celebrate-overlay" hidden></div>
+            <div id="celebrate" class="celebrate-message" hidden>Great job! 🎉</div>
+        </main>
+        
+    </div>
+    <script src="quiz.js" defer></script>
+</body>
+</html>
+
+

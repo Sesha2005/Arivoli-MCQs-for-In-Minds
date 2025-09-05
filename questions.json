@@ -1,0 +1,512 @@
+[
+  {
+    "id": "phy6_set1_q1",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What is the SI unit of force?",
+      "ta": "விசையின் SI அலகு என்ன?"
+    },
+    "options": [
+      {"en": "Newton", "ta": "நியூட்டன்"},
+      {"en": "Joule", "ta": "ஜூல்"},
+      {"en": "Watt", "ta": "வாட்"},
+      {"en": "Pascal", "ta": "பாஸ்கல்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set1_q2",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which force pulls objects towards the Earth?",
+      "ta": "பூமியை நோக்கி பொருள்களை இழுக்கும் விசை எது?"
+    },
+    "options": [
+      {"en": "Magnetic force", "ta": "காந்த விசை"},
+      {"en": "Gravitational force", "ta": "ஈர்ப்பு விசை"},
+      {"en": "Electric force", "ta": "மின்சார விசை"},
+      {"en": "Frictional force", "ta": "உராய்வு விசை"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set1_q3",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What is the speed of light in vacuum?",
+      "ta": "வெற்றிடத்தில் ஒளியின் வேகம் என்ன?"
+    },
+    "options": [
+      {"en": "300,000 km/s", "ta": "300,000 கிமீ/வி"},
+      {"en": "150,000 km/s", "ta": "150,000 கிமீ/வி"},
+      {"en": "450,000 km/s", "ta": "450,000 கிமீ/வி"},
+      {"en": "600,000 km/s", "ta": "600,000 கிமீ/வி"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set1_q4",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which type of energy does a moving car have?",
+      "ta": "நகரும் காரில் உள்ள ஆற்றல் வகை எது?"
+    },
+    "options": [
+      {"en": "Potential energy", "ta": "நிலை ஆற்றல்"},
+      {"en": "Kinetic energy", "ta": "இயக்க ஆற்றல்"},
+      {"en": "Chemical energy", "ta": "வேதியியல் ஆற்றல்"},
+      {"en": "Thermal energy", "ta": "வெப்ப ஆற்றல்"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set1_q5",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What happens when you rub a balloon on your hair?",
+      "ta": "உங்கள் முடியில் பலூனை தேய்த்தால் என்ன நடக்கும்?"
+    },
+    "options": [
+      {"en": "It becomes magnetic", "ta": "அது காந்தமாக மாறும்"},
+      {"en": "It becomes charged with static electricity", "ta": "அது நிலையான மின்சாரத்தால் மின்னூட்டமாகும்"},
+      {"en": "It becomes hot", "ta": "அது சூடாகும்"},
+      {"en": "It becomes heavier", "ta": "அது கனமாகும்"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set1_q6",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which material is a good conductor of electricity?",
+      "ta": "மின்சாரத்தின் நல்ல கடத்தி எது?"
+    },
+    "options": [
+      {"en": "Wood", "ta": "மரம்"},
+      {"en": "Plastic", "ta": "பிளாஸ்டிக்"},
+      {"en": "Copper", "ta": "தாமிரம்"},
+      {"en": "Rubber", "ta": "ரப்பர்"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set1_q7",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What is the unit of electric current?",
+      "ta": "மின்சாரத்தின் அலகு என்ன?"
+    },
+    "options": [
+      {"en": "Volt", "ta": "வோல்ட்"},
+      {"en": "Ampere", "ta": "ஆம்பியர்"},
+      {"en": "Ohm", "ta": "ஓம்"},
+      {"en": "Watt", "ta": "வாட்"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set1_q8",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which mirror can form a real image?",
+      "ta": "எந்த கண்ணாடி உண்மையான படத்தை உருவாக்கும்?"
+    },
+    "options": [
+      {"en": "Plane mirror", "ta": "தட்டையான கண்ணாடி"},
+      {"en": "Convex mirror", "ta": "குவி கண்ணாடி"},
+      {"en": "Concave mirror", "ta": "குழி கண்ணாடி"},
+      {"en": "All mirrors", "ta": "அனைத்து கண்ணாடிகளும்"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set1_q9",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What is the frequency of sound that humans can hear?",
+      "ta": "மனிதர்கள் கேட்கக்கூடிய ஒலியின் அதிர்வெண் என்ன?"
+    },
+    "options": [
+      {"en": "20 Hz to 20,000 Hz", "ta": "20 ஹெர்ட்ஸ் முதல் 20,000 ஹெர்ட்ஸ்"},
+      {"en": "10 Hz to 10,000 Hz", "ta": "10 ஹெர்ட்ஸ் முதல் 10,000 ஹெர்ட்ஸ்"},
+      {"en": "50 Hz to 50,000 Hz", "ta": "50 ஹெர்ட்ஸ் முதல் 50,000 ஹெர்ட்ஸ்"},
+      {"en": "100 Hz to 100,000 Hz", "ta": "100 ஹெர்ட்ஸ் முதல் 100,000 ஹெர்ட்ஸ்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set1_q10",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What type of wave is sound?",
+      "ta": "ஒலி என்பது எந்த வகையான அலை?"
+    },
+    "options": [
+      {"en": "Transverse wave", "ta": "குறுக்கு அலை"},
+      {"en": "Longitudinal wave", "ta": "நீள அலை"},
+      {"en": "Electromagnetic wave", "ta": "மின்காந்த அலை"},
+      {"en": "Radio wave", "ta": "வானொலி அலை"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set2_q1",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What is the acceleration due to gravity on Earth?",
+      "ta": "பூமியில் ஈர்ப்பு காரணமாக ஏற்படும் முடுக்கம் என்ன?"
+    },
+    "options": [
+      {"en": "9.8 m/s²", "ta": "9.8 மீ/வி²"},
+      {"en": "8.9 m/s²", "ta": "8.9 மீ/வி²"},
+      {"en": "10.8 m/s²", "ta": "10.8 மீ/வி²"},
+      {"en": "7.8 m/s²", "ta": "7.8 மீ/வி²"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set2_q2",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which law states that every action has an equal and opposite reaction?",
+      "ta": "ஒவ்வொரு செயலுக்கும் சமமான மற்றும் எதிர் எதிர்வினை உள்ளது என்பது எந்த விதி?"
+    },
+    "options": [
+      {"en": "Newton's First Law", "ta": "நியூட்டனின் முதல் விதி"},
+      {"en": "Newton's Second Law", "ta": "நியூட்டனின் இரண்டாம் விதி"},
+      {"en": "Newton's Third Law", "ta": "நியூட்டனின் மூன்றாம் விதி"},
+      {"en": "Law of Conservation", "ta": "பாதுகாப்பு விதி"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set2_q3",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What is the formula for calculating speed?",
+      "ta": "வேகத்தை கணக்கிடுவதற்கான சூத்திரம் என்ன?"
+    },
+    "options": [
+      {"en": "Speed = Distance × Time", "ta": "வேகம் = தூரம் × நேரம்"},
+      {"en": "Speed = Distance ÷ Time", "ta": "வேகம் = தூரம் ÷ நேரம்"},
+      {"en": "Speed = Time ÷ Distance", "ta": "வேகம் = நேரம் ÷ தூரம்"},
+      {"en": "Speed = Force × Distance", "ta": "வேகம் = விசை × தூரம்"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set2_q4",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which type of lens is thicker in the middle?",
+      "ta": "எந்த வகையான வில்லை நடுவில் தடிமனாக இருக்கும்?"
+    },
+    "options": [
+      {"en": "Concave lens", "ta": "குழி வில்லை"},
+      {"en": "Convex lens", "ta": "குவி வில்லை"},
+      {"en": "Plane lens", "ta": "தட்டையான வில்லை"},
+      {"en": "Cylindrical lens", "ta": "உருளை வில்லை"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set2_q5",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What are the primary colors of light?",
+      "ta": "ஒளியின் முதன்மை நிறங்கள் எவை?"
+    },
+    "options": [
+      {"en": "Red, Green, Blue", "ta": "சிவப்பு, பச்சை, நீலம்"},
+      {"en": "Red, Yellow, Blue", "ta": "சிவப்பு, மஞ்சள், நீலம்"},
+      {"en": "Orange, Green, Purple", "ta": "ஆரஞ்சு, பச்சை, ஊதா"},
+      {"en": "Pink, Cyan, Yellow", "ta": "இளஞ்சிவப்பு, சியான், மஞ்சள்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set2_q6",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What happens to the volume of a gas when temperature increases?",
+      "ta": "வெப்பநிலை அதிகரிக்கும்போது வாயுவின் கன அளவு என்னவாகும்?"
+    },
+    "options": [
+      {"en": "Increases", "ta": "அதிகரிக்கும்"},
+      {"en": "Decreases", "ta": "குறையும்"},
+      {"en": "Remains same", "ta": "அப்படியே இருக்கும்"},
+      {"en": "Becomes zero", "ta": "பூஜ்ஜியமாகும்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set2_q7",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which instrument is used to measure temperature?",
+      "ta": "வெப்பநிலையை அளவிட எந்த கருவி பயன்படுத்தப்படுகிறது?"
+    },
+    "options": [
+      {"en": "Barometer", "ta": "பாரோமீட்டர்"},
+      {"en": "Thermometer", "ta": "வெப்பமானி"},
+      {"en": "Hygrometer", "ta": "ஈரப்பதமானி"},
+      {"en": "Anemometer", "ta": "காற்று வேகமானி"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set2_q8",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What is the unit of power?",
+      "ta": "திறனின் அலகு என்ன?"
+    },
+    "options": [
+      {"en": "Joule", "ta": "ஜூல்"},
+      {"en": "Watt", "ta": "வாட்"},
+      {"en": "Newton", "ta": "நியூட்டன்"},
+      {"en": "Ampere", "ta": "ஆம்பியர்"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set2_q9",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which type of energy is stored in a battery?",
+      "ta": "பேட்டரியில் சேமிக்கப்படும் ஆற்றல் வகை எது?"
+    },
+    "options": [
+      {"en": "Kinetic energy", "ta": "இயக்க ஆற்றல்"},
+      {"en": "Chemical energy", "ta": "வேதியியல் ஆற்றல்"},
+      {"en": "Thermal energy", "ta": "வெப்ப ஆற்றல்"},
+      {"en": "Sound energy", "ta": "ஒலி ஆற்றல்"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set2_q10",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What is the speed of sound in air at room temperature?",
+      "ta": "அறை வெப்பநிலையில் காற்றில் ஒலியின் வேகம் என்ன?"
+    },
+    "options": [
+      {"en": "343 m/s", "ta": "343 மீ/வி"},
+      {"en": "300 m/s", "ta": "300 மீ/வி"},
+      {"en": "400 m/s", "ta": "400 மீ/வி"},
+      {"en": "250 m/s", "ta": "250 மீ/வி"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set3_q1",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What is the unit of electric charge?",
+      "ta": "மின்னூட்டத்தின் அலகு என்ன?"
+    },
+    "options": [
+      {"en": "Coulomb", "ta": "கூலும்"},
+      {"en": "Volt", "ta": "வோல்ட்"},
+      {"en": "Ampere", "ta": "ஆம்பியர்"},
+      {"en": "Ohm", "ta": "ஓம்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set3_q2",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which force opposes motion between two surfaces?",
+      "ta": "இரண்டு மேற்பரப்புகளுக்கு இடையே இயக்கத்தை எதிர்க்கும் விசை எது?"
+    },
+    "options": [
+      {"en": "Gravitational force", "ta": "ஈர்ப்பு விசை"},
+      {"en": "Magnetic force", "ta": "காந்த விசை"},
+      {"en": "Frictional force", "ta": "உராய்வு விசை"},
+      {"en": "Electric force", "ta": "மின்சார விசை"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set3_q3",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What is the unit of frequency?",
+      "ta": "அதிர்வெண்ணின் அலகு என்ன?"
+    },
+    "options": [
+      {"en": "Hertz", "ta": "ஹெர்ட்ஸ்"},
+      {"en": "Decibel", "ta": "டெசிபல்"},
+      {"en": "Watt", "ta": "வாட்"},
+      {"en": "Joule", "ta": "ஜூல்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set3_q4",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which type of wave requires a medium to travel?",
+      "ta": "பயணிக்க ஒரு ஊடகம் தேவைப்படும் அலை வகை எது?"
+    },
+    "options": [
+      {"en": "Electromagnetic wave", "ta": "மின்காந்த அலை"},
+      {"en": "Light wave", "ta": "ஒளி அலை"},
+      {"en": "Sound wave", "ta": "ஒலி அலை"},
+      {"en": "Radio wave", "ta": "வானொலி அலை"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set3_q5",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What is the formula for calculating work?",
+      "ta": "வேலையை கணக்கிடுவதற்கான சூத்திரம் என்ன?"
+    },
+    "options": [
+      {"en": "Work = Force × Distance", "ta": "வேலை = விசை × தூரம்"},
+      {"en": "Work = Force ÷ Distance", "ta": "வேலை = விசை ÷ தூரம்"},
+      {"en": "Work = Distance ÷ Force", "ta": "வேலை = தூரம் ÷ விசை"},
+      {"en": "Work = Force + Distance", "ta": "வேலை = விசை + தூரம்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set3_q6",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which material is a good insulator?",
+      "ta": "நல்ல காப்புப் பொருள் எது?"
+    },
+    "options": [
+      {"en": "Copper", "ta": "தாமிரம்"},
+      {"en": "Aluminum", "ta": "அலுமினியம்"},
+      {"en": "Glass", "ta": "கண்ணாடி"},
+      {"en": "Silver", "ta": "வெள்ளி"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set3_q7",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What is the unit of pressure?",
+      "ta": "அழுத்தத்தின் அலகு என்ன?"
+    },
+    "options": [
+      {"en": "Pascal", "ta": "பாஸ்கல்"},
+      {"en": "Newton", "ta": "நியூட்டன்"},
+      {"en": "Joule", "ta": "ஜூல்"},
+      {"en": "Watt", "ta": "வாட்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set3_q8",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which law states that energy cannot be created or destroyed?",
+      "ta": "ஆற்றலை உருவாக்கவோ அழிக்கவோ முடியாது என்பது எந்த விதி?"
+    },
+    "options": [
+      {"en": "Newton's First Law", "ta": "நியூட்டனின் முதல் விதி"},
+      {"en": "Law of Conservation of Energy", "ta": "ஆற்றல் பாதுகாப்பு விதி"},
+      {"en": "Newton's Second Law", "ta": "நியூட்டனின் இரண்டாம் விதி"},
+      {"en": "Ohm's Law", "ta": "ஓமின் விதி"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set3_q9",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "What is the unit of electric resistance?",
+      "ta": "மின்தடையின் அலகு என்ன?"
+    },
+    "options": [
+      {"en": "Ohm", "ta": "ஓம்"},
+      {"en": "Volt", "ta": "வோல்ட்"},
+      {"en": "Ampere", "ta": "ஆம்பியர்"},
+      {"en": "Watt", "ta": "வாட்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set3_q10",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which type of energy is associated with motion?",
+      "ta": "இயக்கத்துடன் தொடர்புடைய ஆற்றல் வகை எது?"
+    },
+    "options": [
+      {"en": "Potential energy", "ta": "நிலை ஆற்றல்"},
+      {"en": "Kinetic energy", "ta": "இயக்க ஆற்றல்"},
+      {"en": "Chemical energy", "ta": "வேதியியல் ஆற்றல்"},
+      {"en": "Thermal energy", "ta": "வெப்ப ஆற்றல்"}
+    ],
+    "answerIndex": 1
+  }
+]

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Arivoli: Test for in Minds</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header class="app-header">
+            <div class="brand">Arivoli: Test for in Minds</div>
+            <div class="controls">
+                <button id="back-btn" class="ghost" hidden>⟵ Back</button>
+                <div class="segmented" aria-label="Language switch">
+                    <button class="segmented-btn" data-lang="en">English</button>
+                    <button class="segmented-btn" data-lang="ta">தமிழ்</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="board" aria-live="polite">
+            <section class="landing" id="avatar-select" hidden>
+                <h1 class="landing-title" id="avatar-title">Choose your avatar</h1>
+                <div class="avatars" id="avatars"></div>
+                <div class="avatar-actions">
+                    <button id="avatar-continue" class="primary" disabled>Continue</button>
+                </div>
+            </section>
+            <section class="landing" id="landing">
+                <h1 class="landing-title">Choose your level</h1>
+                <div class="levels">
+                    <button class="level-card" data-start="beginner">
+                        <div class="level-title">Beginner</div>
+                        <div class="level-sub">Grade 6 • Grade 7 • Grade 8</div>
+                    </button>
+                    <button class="level-card" data-start="intermediate">
+                        <div class="level-title">Intermediate</div>
+                        <div class="level-sub">Grade 9 • Grade 10</div>
+                    </button>
+                    <button class="level-card" data-start="advanced">
+                        <div class="level-title">Advanced</div>
+                        <div class="level-sub">Grade 11 • Grade 12</div>
+                    </button>
+                </div>
+            </section>
+            <section class="landing" id="grade-select" hidden>
+                <h1 class="landing-title" id="grade-title">Choose your grade</h1>
+                <div class="levels" id="grades"></div>
+            </section>
+            <section class="landing" id="subject-select" hidden>
+                <h1 class="landing-title" id="subject-title">Choose your subject</h1>
+                <div class="levels" id="subjects"></div>
+            </section>
+            <section class="question-card" id="question-card">
+                <div class="quiz-header">
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <span class="progress-text" id="progress-text">1/10</span>
+                    </div>
+                    <div class="timer-container">
+                        <div class="timer-circle" id="timer-circle">
+                            <span class="timer-text" id="timer-text">30</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="meta">
+                    <span id="counter">1 / 10</span>
+                    <span id="streak">Streak: 0</span>
+                </div>
+                <h1 class="question" id="question-text">Loading…</h1>
+                <div class="options" id="options"></div>
+                <div class="actions">
+                    <button id="next-btn" class="primary" disabled>Next</button>
+                </div>
+            </section>
+
+            <section class="toast" id="toast" role="status" aria-live="assertive" hidden></section>
+        </main>
+
+        
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
+
