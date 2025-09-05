@@ -19,6 +19,50 @@ const state = {
   correctAnswers: 0
 };
 
+// Set tracking system - prevents users from getting same set twice
+const setTracker = {
+  // Get completed sets for current subject/grade
+  getCompletedSets(grade, subject) {
+    const key = `${grade}_${subject}`;
+    const stored = localStorage.getItem(`completedSets_${key}`);
+    return stored ? new Set(JSON.parse(stored)) : new Set();
+  },
+  
+  // Mark a set as completed
+  markSetCompleted(grade, subject, setNumber) {
+    const key = `${grade}_${subject}`;
+    const completedSets = this.getCompletedSets(grade, subject);
+    completedSets.add(setNumber);
+    localStorage.setItem(`completedSets_${key}`, JSON.stringify([...completedSets]));
+  },
+  
+  // Get available sets for current subject/grade
+  getAvailableSets(grade, subject, totalSets = 3) {
+    const completedSets = this.getCompletedSets(grade, subject);
+    const availableSets = [];
+    
+    for (let i = 1; i <= totalSets; i++) {
+      if (!completedSets.has(i)) {
+        availableSets.push(i);
+      }
+    }
+    
+    // If all sets are completed, reset and start fresh
+    if (availableSets.length === 0) {
+      this.resetCompletedSets(grade, subject);
+      return [1, 2, 3]; // Return all sets
+    }
+    
+    return availableSets;
+  },
+  
+  // Reset completed sets for a subject/grade
+  resetCompletedSets(grade, subject) {
+    const key = `${grade}_${subject}`;
+    localStorage.removeItem(`completedSets_${key}`);
+  }
+};
+
 // Question tracking system - prevents repeats across users
 const questionTracker = {
   usedQuestions: new Set(),
@@ -68,8 +112,6 @@ const elements = {
   toast: document.getElementById('toast'),
   langButtons: Array.from(document.querySelectorAll('[data-lang]')),
   // difficulty is now chosen from landing cards
-  shuffleBtn: document.getElementById('shuffle-btn'),
-  resetBtn: document.getElementById('reset-btn'),
   landing: document.getElementById('landing'),
   avatarSection: document.getElementById('avatar-select'),
   avatars: document.getElementById('avatars'),
@@ -168,31 +210,40 @@ function startQuiz(){
   console.log('Quiz start - State:', { difficulty: state.difficulty, grade: state.grade, subject: state.subject });
   console.log('Total questions loaded:', state.questions.length);
   
-  // Filter questions by difficulty, grade, and subject
+  // Get available sets for this grade/subject combination
+  const availableSets = setTracker.getAvailableSets(state.grade, state.subject);
+  
+  if(availableSets.length === 0){
+    alert('No available question sets. All sets have been completed.');
+    return;
+  }
+  
+  // Randomly select one of the available sets
+  const selectedSet = availableSets[Math.floor(Math.random() * availableSets.length)];
+  state.currentSet = selectedSet;
+  
+  console.log(`Selected set ${selectedSet} for ${state.grade} ${state.subject}`);
+  
+  // Filter questions by difficulty, grade, subject, and set
+  // For advanced grades (11, 12), use 'advanced' difficulty
+  const effectiveDifficulty = (state.grade === 'Grade 11' || state.grade === 'Grade 12') ? 'advanced' : state.difficulty;
+  
   const filtered = state.questions.filter(q => 
-    q.difficulty === state.difficulty && 
+    q.difficulty === effectiveDifficulty && 
     q.grade === state.grade &&
-    q.subject === state.subject
+    q.subject === state.subject &&
+    q.id.includes(`_set${selectedSet}_`)
   );
   
   console.log('Filtered questions:', filtered.length);
   
-  // Debug: Show first few questions to see their structure
-  if (state.questions.length > 0) {
-    console.log('First question structure:', {
-      difficulty: state.questions[0].difficulty,
-      grade: state.questions[0].grade,
-      subject: state.questions[0].subject
-    });
-  }
-  
   // Check if we have questions
   if (filtered.length === 0) {
-    alert(`No questions found for this combination.\nLooking for: difficulty="${state.difficulty}", grade="${state.grade}", subject="${state.subject}"\nTotal questions: ${state.questions.length}`);
+    alert(`No questions found for set ${selectedSet} of this combination.\nLooking for: difficulty="${state.difficulty}", grade="${state.grade}", subject="${state.subject}"\nTotal questions: ${state.questions.length}`);
     return;
   }
   
-  // Select 10 random questions
+  // Select 10 random questions from the chosen set
   state.quizQuestions = shuffleArray([...filtered]).slice(0, state.totalQuestions);
   state.currentQuizIndex = 0;
   state.correctAnswers = 0;
@@ -227,7 +278,7 @@ function renderQuizQuestion(){
   startTimer();
   
   // Update question
-  elements.questionText.textContent = q.text[state.language];
+  elements.questionText.innerHTML = `<div>${q.text.en}</div><div style="margin-top:6px;color:var(--muted);font-weight:600;">${q.text.ta}</div>`;
   elements.options.innerHTML = '';
   state.selectedOptionId = null;
   state.locked = false;
@@ -238,7 +289,7 @@ function renderQuizQuestion(){
     const btn = document.createElement('button');
     btn.className = 'option';
     btn.setAttribute('data-id', String(idx));
-    btn.innerHTML = `<span class="badge">${String.fromCharCode(65+idx)}</span><span>${opt[state.language]}</span>`;
+    btn.innerHTML = `<span class="badge">${String.fromCharCode(65+idx)}</span><span><div>${opt.en}</div><div style="margin-top:4px;color:var(--muted);font-weight:600;">(${opt.ta})</div></span>`;
     btn.addEventListener('click', () => onQuizSelect(idx));
     btn.addEventListener('touchstart', () => onQuizSelect(idx), {passive:true});
     elements.options.appendChild(btn);
@@ -247,6 +298,8 @@ function renderQuizQuestion(){
 
 function startTimer(){
   if(state.timer) clearInterval(state.timer);
+  elements.timerCircle.classList.remove('warning','danger');
+  elements.timerText.textContent = state.timeLeft;
   
   state.timer = setInterval(() => {
     state.timeLeft--;
@@ -308,6 +361,13 @@ function nextQuizQuestion(){
 
 function showQuizResults(){
   const percentage = Math.round((state.correctAnswers / state.totalQuestions) * 100);
+  
+  // Mark the current set as completed
+  if(state.currentSet) {
+    setTracker.markSetCompleted(state.grade, state.subject, state.currentSet);
+    console.log(`Marked set ${state.currentSet} as completed for ${state.grade} ${state.subject}`);
+  }
+  
   const message = state.language === 'en' 
     ? `Quiz Complete! You scored ${state.correctAnswers}/${state.totalQuestions} (${percentage}%)`
     : `வினாடி வினா முடிந்தது! நீங்கள் ${state.correctAnswers}/${state.totalQuestions} (${percentage}%) பெற்றுள்ளீர்கள்`;
@@ -531,7 +591,7 @@ async function init(){
   }
   elements.gradeSection && (elements.gradeSection.hidden = true);
   elements.subjectSection && (elements.subjectSection.hidden = true);
-  elements.questionCard.hidden = true;
+  if(elements.questionCard) elements.questionCard.hidden = true;
 }
 
 function showGradeSelection(){
@@ -668,4 +728,3 @@ function applyLanguage(){
 }
 
 init();
-

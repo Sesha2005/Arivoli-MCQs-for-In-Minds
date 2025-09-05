@@ -12,7 +12,54 @@ const state = {
   totalQuestions: 10,
   correctAnswers: 0,
   streak: Number(localStorage.getItem('streak') || 0),
-  locked: false
+  locked: false,
+  currentSet: null
+};
+
+// Set tracking system - prevents users from getting same set twice
+const setTracker = {
+  completedSets: new Set(),
+  
+  // Get completed sets for current subject/grade
+  getCompletedSets(grade, subject) {
+    const key = `${grade}_${subject}`;
+    const stored = localStorage.getItem(`completedSets_${key}`);
+    return stored ? new Set(JSON.parse(stored)) : new Set();
+  },
+  
+  // Mark a set as completed
+  markSetCompleted(grade, subject, setNumber) {
+    const key = `${grade}_${subject}`;
+    const completedSets = this.getCompletedSets(grade, subject);
+    completedSets.add(setNumber);
+    localStorage.setItem(`completedSets_${key}`, JSON.stringify([...completedSets]));
+  },
+  
+  // Get available sets for current subject/grade
+  getAvailableSets(grade, subject, totalSets = 3) {
+    const completedSets = this.getCompletedSets(grade, subject);
+    const availableSets = [];
+    
+    for (let i = 1; i <= totalSets; i++) {
+      if (!completedSets.has(i)) {
+        availableSets.push(i);
+      }
+    }
+    
+    // If all sets are completed, reset and start fresh
+    if (availableSets.length === 0) {
+      this.resetCompletedSets(grade, subject);
+      return [1, 2, 3]; // Return all sets
+    }
+    
+    return availableSets;
+  },
+  
+  // Reset completed sets for a subject/grade
+  resetCompletedSets(grade, subject) {
+    const key = `${grade}_${subject}`;
+    localStorage.removeItem(`completedSets_${key}`);
+  }
 };
 
 const elements = {
@@ -53,16 +100,39 @@ async function loadQuestions(){
 }
 
 function startQuiz(){
-  const filtered = state.questions.filter(q => 
-    q.difficulty === state.difficulty &&
-    q.grade === state.grade &&
-    q.subject === state.subject
-  );
-  if(filtered.length === 0){
-    alert('No questions found for this selection.');
+  // Get available sets for this grade/subject combination
+  const availableSets = setTracker.getAvailableSets(state.grade, state.subject);
+  
+  if(availableSets.length === 0){
+    alert('No available question sets. All sets have been completed.');
     window.history.back();
     return;
   }
+  
+  // Randomly select one of the available sets
+  const selectedSet = availableSets[Math.floor(Math.random() * availableSets.length)];
+  state.currentSet = selectedSet;
+  
+  console.log(`Selected set ${selectedSet} for ${state.grade} ${state.subject}`);
+  
+  // Filter questions by difficulty, grade, subject, and set
+  // For advanced grades (11, 12), use 'advanced' difficulty
+  const effectiveDifficulty = (state.grade === 'Grade 11' || state.grade === 'Grade 12') ? 'advanced' : state.difficulty;
+  
+  const filtered = state.questions.filter(q => 
+    q.difficulty === effectiveDifficulty &&
+    q.grade === state.grade &&
+    q.subject === state.subject &&
+    q.id.includes(`_set${selectedSet}_`)
+  );
+  
+  if(filtered.length === 0){
+    alert(`No questions found for set ${selectedSet} of this selection.`);
+    window.history.back();
+    return;
+  }
+  
+  // Shuffle and select 10 questions from the chosen set
   state.quizQuestions = shuffleArray([...filtered]).slice(0, state.totalQuestions);
   state.currentQuizIndex = 0;
   state.correctAnswers = 0;
@@ -148,6 +218,13 @@ function nextQuestion(){
 
 function showQuizResults(){
   const percentage = Math.round((state.correctAnswers / state.totalQuestions) * 100);
+  
+  // Mark the current set as completed
+  if(state.currentSet) {
+    setTracker.markSetCompleted(state.grade, state.subject, state.currentSet);
+    console.log(`Marked set ${state.currentSet} as completed for ${state.grade} ${state.subject}`);
+  }
+  
   elements.questionText.textContent = `Quiz Complete! You scored ${state.correctAnswers}/${state.totalQuestions} (${percentage}%)`;
   elements.options.innerHTML = '';
   elements.progressFill.style.width = '100%';
@@ -220,5 +297,3 @@ function burstConfetti(){
   await loadQuestions();
   startQuiz();
 })();
-
-

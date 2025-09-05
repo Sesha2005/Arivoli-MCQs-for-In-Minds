@@ -104,6 +104,7 @@ body{
 .timer-circle.danger{background:var(--danger)}
 
 /* Confetti / Sparkles */
+#confetti-root{position:fixed;left:0;top:0;width:100vw;height:100vh;pointer-events:none;z-index:9999;overflow:visible}
 .confetti-burst{position:fixed;left:0;top:0;width:100vw;height:100vh;pointer-events:none;z-index:9999;overflow:visible}
 .sparkle{position:absolute;width:8px;height:8px;border-radius:2px;opacity:.95;animation:burst 1100ms ease-out forwards}
 .sparkle:nth-child(4n){border-radius:50%}
@@ -128,6 +129,27 @@ body{
 
 /* Screen-dimming overlay to highlight popup */
 .celebrate-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.35);backdrop-filter:blur(1px);z-index:10000}
+
+/* Celebrate message styles */
+.celebrate{
+  position:fixed;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  background:var(--accent);
+  color:white;
+  padding:20px 30px;
+  border-radius:20px;
+  font-weight:800;
+  font-size:24px;
+  z-index:10001;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity 0.3s ease;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+.celebrate.show{
+  opacity:1;
+}
 
 /* Make sparkles extra vibrant */
 .sparkle{box-shadow:0 0 0 2px #ffffff22, 0 0 10px #ffffff55;mix-blend-mode:screen;will-change:transform,opacity}
