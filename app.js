@@ -7,9 +7,9 @@ const state = {
   questions: [],
   order: [],
   index: 0,
-  streak: Number(localStorage.getItem('streak') || 0),
   selectedOptionId: null,
   locked: false,
+  streak: parseInt(localStorage.getItem('streak')) || 0,
   // Quiz state
   quizQuestions: [],
   currentQuizIndex: 0,
@@ -205,17 +205,21 @@ const questionTracker = {
 };
 
 const elements = {
+  langButtons: document.querySelectorAll('[data-lang]'),
+  backBtn: document.getElementById('back-btn'),
+  welcome: document.getElementById('welcome'),
+  beginBtn: document.getElementById('begin-btn'),
+  landing: document.getElementById('landing'),
+  questionCard: document.getElementById('question-card'),
   questionText: document.getElementById('question-text'),
   options: document.getElementById('options'),
   nextBtn: document.getElementById('next-btn'),
   counter: document.getElementById('counter'),
   streak: document.getElementById('streak'),
   toast: document.getElementById('toast'),
-  langButtons: Array.from(document.querySelectorAll('[data-lang]')),
-  // difficulty is now chosen from landing cards
-  landing: document.getElementById('landing'),
   avatarSection: document.getElementById('avatar-select'),
   avatars: document.getElementById('avatars'),
+  avatarTitle: document.getElementById('avatar-title'),
   avatarContinue: document.getElementById('avatar-continue'),
   gradeSection: document.getElementById('grade-select'),
   grades: document.getElementById('grades'),
@@ -223,14 +227,20 @@ const elements = {
   subjectSection: document.getElementById('subject-select'),
   subjects: document.getElementById('subjects'),
   subjectTitle: document.getElementById('subject-title'),
-  avatarTitle: document.getElementById('avatar-title'),
-  questionCard: document.getElementById('question-card'),
-  backBtn: document.getElementById('back-btn'),
   // Quiz elements
   progressFill: document.getElementById('progress-fill'),
   progressText: document.getElementById('progress-text'),
   timerCircle: document.getElementById('timer-circle'),
-  timerText: document.getElementById('timer-text')
+  timerText: document.getElementById('timer-text'),
+  // Welcome page elements
+  welcomeTitle: document.getElementById('welcome-title'),
+  welcomeSub: document.getElementById('welcome-sub'),
+  featureLevelsTitle: document.getElementById('feature-levels-title'),
+  featureLevelsDesc: document.getElementById('feature-levels-desc'),
+  featureBadgesTitle: document.getElementById('feature-badges-title'),
+  featureBadgesDesc: document.getElementById('feature-badges-desc'),
+  featureBilingualTitle: document.getElementById('feature-bilingual-title'),
+  featureBilingualDesc: document.getElementById('feature-bilingual-desc')
 };
 
 const TEXTS = {
@@ -241,29 +251,77 @@ const TEXTS = {
     levelTitle: 'Choose your level',
     gradeTitle: 'Choose your grade',
     subjectTitle: 'Choose your subject',
-    subjects: { physics: 'Physics', chemistry: 'Chemistry', biology: 'Biology' },
+    welcome: {
+      title: 'Arivoli',
+      subtitle: 'MCQs for Young Minds — explore Science and level up as you learn!',
+      beginBtn: "Let's Begin ",
+      featureLevels: {
+        title: 'Three Levels',
+        desc: 'Beginner, Intermediate, Advanced'
+      },
+      featureBadges: {
+        title: 'Science Fields',
+        desc: 'Physics, Chemistry, Biology'
+      },
+      featureBilingual: {
+        title: 'Bilingual',
+        desc: 'Available in English and Tamil'
+      }
+    },
     levels: {
       beginner: { title: 'Beginner', sub: 'Grade 6 • Grade 7 • Grade 8' },
       intermediate: { title: 'Intermediate', sub: 'Grade 9 • Grade 10' },
       advanced: { title: 'Advanced', sub: 'Grade 11 • Grade 12' }
+    },
+    grades: {
+      'Grade 6': 'Grade 6', 'Grade 7': 'Grade 7', 'Grade 8': 'Grade 8',
+      'Grade 9': 'Grade 9', 'Grade 10': 'Grade 10',
+      'Grade 11': 'Grade 11', 'Grade 12': 'Grade 12'
+    },
+    subjects: {
+      physics: 'Physics',
+      chemistry: 'Chemistry',
+      biology: 'Biology'
     }
   },
   ta: {
     back: '⟵ பின்',
-    avatarTitle: 'உங்கள் அவதாரத்தைத் தேர்வு செய்க',
-    continue: 'தொடர்க',
-    levelTitle: 'உங்கள் நிலையைத் தேர்வு செய்க',
-    gradeTitle: 'உங்கள் வகுப்பைத் தேர்வு செய்க',
-    subjectTitle: 'பாடத்தைத் தேர்வு செய்க',
-    subjects: { physics: 'இயற்பியல்', chemistry: 'வேதியியல்', biology: 'உயிரியல்' },
-    grades: {
-      'Grade 6': 'வகுப்பு 6', 'Grade 7': 'வகுப்பு 7', 'Grade 8': 'வகுப்பு 8',
-      'Grade 9': 'வகுப்பு 9', 'Grade 10': 'வகுப்பு 10', 'Grade 11': 'வகுப்பு 11', 'Grade 12': 'வகுப்பு 12'
+    avatarTitle: 'உங்கள் அவதாரத்தை தேர்வு செய்யுங்கள்',
+    continue: 'தொடரவும்',
+    levelTitle: 'உங்கள் நிலையை தேர்வு செய்யுங்கள்',
+    gradeTitle: 'உங்கள் வகுப்பை தேர்வு செய்யுங்கள்',
+    subjectTitle: 'உங்கள் பாடத்தை தேர்வு செய்யுங்கள்',
+    welcome: {
+      title: 'அறிவொளி',
+      subtitle: 'இளம் மனங்களுக்கான பல்வேறு தேர்வுகள் — அறிவியலை ஆராய்ந்து கற்றுக்கொள்ளுங்கள்!',
+      beginBtn: 'தொடங்குவோம் ',
+      featureLevels: {
+        title: 'மூன்று நிலைகள்',
+        desc: 'தொடக்க, இடைநிலை, மேல்நிலை'
+      },
+      featureBadges: {
+        title: 'அறிவியல் துறைகள்',
+        desc: 'இயற்பியல், வேதியியல், உயிரியல்'
+      },
+      featureBilingual: {
+        title: 'இருமொழி',
+        desc: 'ஆங்கிலம் மற்றும் தமிழில் கிடைக்கிறது'
+      }
     },
     levels: {
       beginner: { title: 'தொடக்க நிலை', sub: 'வகுப்பு 6 • வகுப்பு 7 • வகுப்பு 8' },
       intermediate: { title: 'இடைநிலை', sub: 'வகுப்பு 9 • வகுப்பு 10' },
-      advanced: { title: 'மேம்பட்ட', sub: 'வகுப்பு 11 • வகுப்பு 12' }
+      advanced: { title: 'மேல்நிலை', sub: 'வகுப்பு 11 • வகுப்பு 12' }
+    },
+    grades: {
+      'Grade 6': 'வகுப்பு 6', 'Grade 7': 'வகுப்பு 7', 'Grade 8': 'வகுப்பு 8',
+      'Grade 9': 'வகுப்பு 9', 'Grade 10': 'வகுப்பு 10',
+      'Grade 11': 'வகுப்பு 11', 'Grade 12': 'வகுப்பு 12'
+    },
+    subjects: {
+      physics: 'இயற்பியல்',
+      chemistry: 'வேதியியல்',
+      biology: 'உயிரியல்'
     }
   }
 };
@@ -332,7 +390,7 @@ function startQuiz(){
   // Use flexible difficulty matching to handle mixed difficulty levels in question sets
   const filtered = state.questions.filter(q => 
     q.grade === state.grade &&
-    q.subject === state.subject &&
+    q.subject.toLowerCase() === state.subject.toLowerCase() &&
     q.id.includes(`_set${selectedSet}_`)
   );
   
@@ -454,9 +512,6 @@ function onQuizSelect(idx){
   
   if(correct){
     state.correctAnswers++;
-    state.streak += 1;
-  } else {
-    state.streak = 0;
   }
   
   // Show correct/incorrect answers
@@ -466,7 +521,6 @@ function onQuizSelect(idx){
     if(i === idx && !correct){ b.classList.add('wrong'); }
   });
   
-  elements.streak.textContent = `Streak: ${state.streak}`;
   elements.nextBtn.disabled = false;
   
   // Auto-advance after 2 seconds
@@ -567,27 +621,49 @@ function onSelect(idx){
     if(i === q.answerIndex){ b.classList.add('correct'); }
     if(i === idx && !correct){ b.classList.add('wrong'); }
   });
+  
   if(correct){
-    state.streak += 1;
-    if(state.streak > 0 && state.streak % 3 === 0){
+    // Increment streak for correct answer
+    state.streak++;
+    localStorage.setItem('streak', state.streak.toString());
+    
+    // Show congratulations message only for streaks of 2 or more
+    if(state.streak >= 2) {
       showCongrats();
     }
   } else {
+    // Reset streak for incorrect answer
     state.streak = 0;
+    localStorage.setItem('streak', '0');
   }
-  localStorage.setItem('streak', String(state.streak));
-  elements.streak.textContent = `Streak: ${state.streak}`;
+  
   elements.nextBtn.disabled = false;
 }
 
 function showCongrats(){
+  const streakCount = state.streak;
+  console.log('Showing congrats for streak:', streakCount);
+  
   const msgs = {
-    en: 'Great job! 3 in a row! 🎉',
-    ta: 'மிகச் சிறப்பு! 3 வெற்றி தொடர்ச்சி! 🎉'
+    en: `Excellent! ${streakCount} in a row! 🔥`,
+    ta: `அருமை! ${streakCount} தொடர்ச்சி வெற்றி! 🔥`
   };
-  elements.toast.innerHTML = `<div>${msgs[state.language]}</div>`;
-  elements.toast.hidden = false;
-  setTimeout(()=>{ elements.toast.hidden = true; }, 2000);
+  
+  console.log('Toast element:', elements.toast);
+  console.log('Message:', msgs[state.language]);
+  
+  if(elements.toast) {
+    elements.toast.innerHTML = `<div style="background: #10b981; color: white; padding: 16px 24px; border-radius: 12px; font-weight: 600; text-align: center; box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);">${msgs[state.language]}</div>`;
+    elements.toast.hidden = false;
+    elements.toast.style.display = 'block';
+    
+    setTimeout(() => { 
+      elements.toast.hidden = true; 
+      elements.toast.style.display = 'none';
+    }, 3000);
+  } else {
+    console.error('Toast element not found!');
+  }
 }
 
 function nextQuestion(){
@@ -731,13 +807,19 @@ async function init(){
     }
   });
   
-  // Always show avatar selection first
-  if(elements.avatarSection){
-    showAvatarSelection();
-  } else {
-    // fallback: show level selection
-    elements.landing.hidden = false;
+  // Show welcome page first
+  showWelcomePage();
+  
+  // Set up begin button event listener
+  if(elements.beginBtn) {
+    elements.beginBtn.addEventListener('click', () => {
+      showAvatarSelection();
+    });
   }
+  
+  // Hide other sections initially
+  if(elements.avatarSection) elements.avatarSection.hidden = true;
+  if(elements.landing) elements.landing.hidden = true;
   elements.gradeSection && (elements.gradeSection.hidden = true);
   elements.subjectSection && (elements.subjectSection.hidden = true);
   if(elements.questionCard) elements.questionCard.hidden = true;
@@ -822,9 +904,14 @@ function goToLevelFromAvatar(){
 
 function showAvatarSelection(){
   renderAvatars();
+  // Hide welcome page completely
+  if(elements.welcome) elements.welcome.hidden = true;
+  // Show avatar section
   elements.avatarSection.hidden = false;
+  // Hide all other sections
   elements.landing.hidden = true;
   elements.gradeSection && (elements.gradeSection.hidden = true);
+  elements.subjectSection && (elements.subjectSection.hidden = true);
   elements.questionCard.hidden = true;
   elements.backBtn.hidden = true;
   // localized labels
@@ -839,10 +926,42 @@ function showAvatarSelection(){
   }
 }
 
+function showWelcomePage(){
+  if(elements.welcome) {
+    elements.welcome.hidden = false;
+  }
+  if(elements.avatarSection) elements.avatarSection.hidden = true;
+  if(elements.landing) elements.landing.hidden = true;
+  if(elements.gradeSection) elements.gradeSection.hidden = true;
+  if(elements.subjectSection) elements.subjectSection.hidden = true;
+  if(elements.questionCard) elements.questionCard.hidden = true;
+  elements.backBtn.hidden = true;
+  
+  // Apply welcome page language
+  applyWelcomeLanguage();
+}
+
+function applyWelcomeLanguage(){
+  const welcome = TEXTS[state.language].welcome;
+  if(elements.welcomeTitle) elements.welcomeTitle.textContent = welcome.title;
+  if(elements.welcomeSub) elements.welcomeSub.textContent = welcome.subtitle;
+  if(elements.beginBtn) elements.beginBtn.textContent = welcome.beginBtn;
+  if(elements.featureLevelsTitle) elements.featureLevelsTitle.textContent = welcome.featureLevels.title;
+  if(elements.featureLevelsDesc) elements.featureLevelsDesc.textContent = welcome.featureLevels.desc;
+  if(elements.featureBadgesTitle) elements.featureBadgesTitle.textContent = welcome.featureBadges.title;
+  if(elements.featureBadgesDesc) elements.featureBadgesDesc.textContent = welcome.featureBadges.desc;
+  if(elements.featureBilingualTitle) elements.featureBilingualTitle.textContent = welcome.featureBilingual.title;
+  if(elements.featureBilingualDesc) elements.featureBilingualDesc.textContent = welcome.featureBilingual.desc;
+}
+
 function applyLanguage(){
   if(elements.backBtn) elements.backBtn.textContent = TEXTS[state.language].back;
   if(elements.avatarTitle) elements.avatarTitle.textContent = TEXTS[state.language].avatarTitle;
   if(elements.avatarContinue) elements.avatarContinue.textContent = TEXTS[state.language].continue;
+  
+  // Apply welcome page language
+  applyWelcomeLanguage();
+  
   // Landing title and level cards
   if(elements.landing){
     const titleEl = elements.landing.querySelector('.landing-title');

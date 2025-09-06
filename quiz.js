@@ -11,9 +11,9 @@ const state = {
   timeLeft: 30,
   totalQuestions: 10,
   correctAnswers: 0,
-  streak: Number(localStorage.getItem('streak') || 0),
   locked: false,
-  currentSet: null
+  currentSet: null,
+  streak: parseInt(localStorage.getItem('streak')) || 0
 };
 
 // Multi-user set tracking system - ensures different users get different sets
@@ -168,7 +168,6 @@ const elements = {
   timerCircle: document.getElementById('timer-circle'),
   timerText: document.getElementById('timer-text'),
   counter: document.getElementById('counter'),
-  streak: document.getElementById('streak'),
   questionText: document.getElementById('question-text'),
   options: document.getElementById('options'),
   confettiRoot: document.getElementById('confetti-root'),
@@ -314,14 +313,20 @@ function onSelect(idx){
   const correct = idx === q.answerIndex;
   if(correct){
     state.correctAnswers++;
-    state.streak += 1;
-    showCongrats();
+    // Increment streak for correct answer
+    state.streak++;
+    localStorage.setItem('streak', state.streak.toString());
+    
+    // Show congratulations message only for streaks of 2 or more
+    if(state.streak >= 2) {
+      showCongrats();
+    }
     burstConfetti();
   } else {
+    // Reset streak for incorrect answer
     state.streak = 0;
+    localStorage.setItem('streak', '0');
   }
-  localStorage.setItem('streak', String(state.streak));
-  elements.streak.textContent = `Streak: ${state.streak}`;
   const buttons = Array.from(elements.options.querySelectorAll('.option'));
   buttons.forEach((b, i) => {
     if(i === q.answerIndex){ b.classList.add('correct'); }
@@ -379,8 +384,23 @@ function bindUI(){
 }
 
 function showCongrats(){
+  const streakCount = state.streak;
+  let msgs;
+  
+  if(streakCount === 2) {
+    msgs = {
+      en: `🎉 AMAZING! Two in a row! 🌟 You're on fire! 🔥`,
+      ta: `🎉 அற்புதம்! இரண்டு தொடர்ச்சி! 🌟 நீங்கள் சிறப்பாக செய்கிறீர்கள்! 🔥`
+    };
+  } else {
+    msgs = {
+      en: `🚀 INCREDIBLE! ${streakCount} in a row! 💫 Keep going champion! 🏆`,
+      ta: `🚀 நம்பமுடியாதது! ${streakCount} தொடர்ச்சி! 💫 தொடர்ந்து செய்யுங்கள் வீரர்! 🏆`
+    };
+  }
+  
   if(!elements.celebrate) return;
-  elements.celebrate.textContent = state.streak > 1 ? `Great! ${state.streak} in a row! 🎉` : 'Correct! 🎉';
+  elements.celebrate.textContent = msgs[state.language];
   elements.celebrate.hidden = false;
   elements.celebrate.classList.add('show');
   setTimeout(()=>{
@@ -412,7 +432,7 @@ function burstConfetti(){
   }
   // Show central appreciation message
   if(elements.celebrate){
-    elements.celebrate.textContent = state.streak > 1 ? `Amazing! ${state.streak} correct in a row! 🎉` : 'Great job! 🎉';
+    elements.celebrate.textContent = 'Great job! 🎉';
     elements.celebrate.hidden = false;
     elements.celebrate.classList.add('show');
   }

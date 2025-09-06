@@ -1,91 +1,127 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Arivoli: Test for in Minds</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Arivoli: Test for Young Minds</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <header class="app-header">
-            <div class="brand">Arivoli: Test for in Minds</div>
-            <div class="controls">
-                <button id="back-btn" class="ghost" hidden>⟵ Back</button>
-                <div class="segmented" aria-label="Language switch">
-                    <button class="segmented-btn" data-lang="en">English</button>
-                    <button class="segmented-btn" data-lang="ta">தமிழ்</button>
-                </div>
+  <div id="app">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand">Arivoli: Test for Young Minds</div>
+      <div class="controls">
+        <button id="back-btn" class="ghost" hidden>⟵ Back</button>
+        <div class="segmented" aria-label="Language switch">
+          <button class="segmented-btn" data-lang="en">English</button>
+          <button class="segmented-btn" data-lang="ta">தமிழ்</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="board" aria-live="polite">
+             <!-- Welcome / Let's Begin -->
+       <section class="welcome" id="welcome">
+         <div class="welcome-content">
+           <div class="welcome-left">
+             <div class="character-avatar">
+               <img src="lightbulb-scientist.png" alt="Lightbulb Scientist" class="character-image" />
+             </div>
+           </div>
+           <div class="welcome-right">
+             <h1 class="welcome-title" id="welcome-title">Arivoli</h1>
+             <p class="welcome-sub" id="welcome-sub">
+               MCQs for Young Minds — explore Science and level up as you learn!
+             </p>
+             <button id="begin-btn" class="primary">Let's Begin 🚀</button>
+             <div class="welcome-features">
+               <div class="feature-box" id="f1">
+                 <div class="feature-icon">🎯</div>
+                 <h3 class="feature-title" id="feature-levels-title">Three Levels</h3>
+                 <p class="feature-desc" id="feature-levels-desc">Beginner, Intermediate, Advanced</p>
+               </div>
+               <div class="feature-box" id="f2">
+                 <div class="feature-icon">🏅</div>
+                 <h3 class="feature-title" id="feature-badges-title">Science Fields</h3>
+                 <p class="feature-desc" id="feature-badges-desc">Physics, Chemistry, Biology</p>
+               </div>
+               <div class="feature-box" id="f3">
+                 <div class="feature-icon">🌐</div>
+                 <h3 class="feature-title" id="feature-bilingual-title">Bilingual</h3>
+                 <p class="feature-desc" id="feature-bilingual-desc">Available in English and Tamil</p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </section>
+
+             <!-- Avatar Selection -->
+       <section class="landing" id="avatar-select" hidden>
+         <h1 class="landing-title" id="avatar-title">Choose your avatar</h1>
+         <div class="avatars" id="avatars"></div>
+         <div class="avatar-actions">
+           <button id="avatar-continue" class="primary" disabled>Continue</button>
+         </div>
+       </section>
+
+      <!-- Levels -->
+      <section class="landing" id="landing" hidden>
+        <h1 class="landing-title">Choose your level</h1>
+        <div class="levels"></div>
+      </section>
+      <!-- Grades -->
+      <section class="landing" id="grade-select" hidden>
+        <h1 class="landing-title" id="grade-title">Choose your grade</h1>
+        <div class="levels" id="grades"></div>
+      </section>
+
+      <!-- Subjects -->
+      <section class="landing" id="subject-select" hidden>
+        <h1 class="landing-title" id="subject-title">Choose your subject</h1>
+        <div class="levels" id="subjects"></div>
+      </section>
+      <!-- Quiz -->
+      <section class="question-card" id="question-card" hidden>
+        <div class="quiz-header">
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progress-fill"></div>
             </div>
-        </header>
+            <span class="progress-text" id="progress-text">1/10</span>
+          </div>
+          <div class="timer-container">
+            <div class="timer-circle" id="timer-circle">
+              <span class="timer-text" id="timer-text">30</span>
+            </div>
+          </div>
+        </div>
+        <div class="meta">
+          <span id="counter">1 / 10</span>
+        </div>
+        <h1 class="question" id="question-text">Loading…</h1>
+        <div class="options" id="options"></div>
+        <div class="actions">
+          <button id="next-btn" class="primary" disabled>Next</button>
+        </div>
+      </section>
 
-        <main class="board" aria-live="polite">
-            <section class="landing" id="avatar-select" hidden>
-                <h1 class="landing-title" id="avatar-title">Choose your avatar</h1>
-                <div class="avatars" id="avatars"></div>
-                <div class="avatar-actions">
-                    <button id="avatar-continue" class="primary" disabled>Continue</button>
-                </div>
-            </section>
-            <section class="landing" id="landing">
-                <h1 class="landing-title">Choose your level</h1>
-                <div class="levels">
-                    <button class="level-card" data-start="beginner">
-                        <div class="level-title">Beginner</div>
-                        <div class="level-sub">Grade 6 • Grade 7 • Grade 8</div>
-                    </button>
-                    <button class="level-card" data-start="intermediate">
-                        <div class="level-title">Intermediate</div>
-                        <div class="level-sub">Grade 9 • Grade 10</div>
-                    </button>
-                    <button class="level-card" data-start="advanced">
-                        <div class="level-title">Advanced</div>
-                        <div class="level-sub">Grade 11 • Grade 12</div>
-                    </button>
-                </div>
-            </section>
-            <section class="landing" id="grade-select" hidden>
-                <h1 class="landing-title" id="grade-title">Choose your grade</h1>
-                <div class="levels" id="grades"></div>
-            </section>
-            <section class="landing" id="subject-select" hidden>
-                <h1 class="landing-title" id="subject-title">Choose your subject</h1>
-                <div class="levels" id="subjects"></div>
-            </section>
-            <section class="question-card" id="question-card">
-                <div class="quiz-header">
-                    <div class="progress-container">
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progress-fill"></div>
-                        </div>
-                        <span class="progress-text" id="progress-text">1/10</span>
-                    </div>
-                    <div class="timer-container">
-                        <div class="timer-circle" id="timer-circle">
-                            <span class="timer-text" id="timer-text">30</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="meta">
-                    <span id="counter">1 / 10</span>
-                    <span id="streak">Streak: 0</span>
-                </div>
-                <h1 class="question" id="question-text">Loading…</h1>
-                <div class="options" id="options"></div>
-                <div class="actions">
-                    <button id="next-btn" class="primary" disabled>Next</button>
-                </div>
-            </section>
+      <!-- Toast -->
+      <section class="toast" id="toast" role="status" aria-live="assertive" hidden></section>
+    </main>
 
-            <section class="toast" id="toast" role="status" aria-live="assertive" hidden></section>
-        </main>
+         <!-- Footer -->
+     <footer class="app-footer">
+       <div class="footer-content">
+         <div class="footer-text">
+           Designed and Developed by RMK Engineering College
+         </div>
+       </div>
+     </footer>
+  </div>
 
-        
-    </div>
-
-    <script src="app.js" defer></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
