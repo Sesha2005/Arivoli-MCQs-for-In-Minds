@@ -16,49 +16,148 @@ const state = {
   currentSet: null
 };
 
-// Set tracking system - prevents users from getting same set twice
+// Multi-user set tracking system - ensures different users get different sets
 const setTracker = {
-  completedSets: new Set(),
+  // Generate unique user session ID
+  getUserSessionId() {
+    let sessionId = sessionStorage.getItem('userSessionId');
+    if (!sessionId) {
+      sessionId = 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+      sessionStorage.setItem('userSessionId', sessionId);
+    }
+    return sessionId;
+  },
   
-  // Get completed sets for current subject/grade
+  // Get completed sets for current user and subject/grade
   getCompletedSets(grade, subject) {
-    const key = `${grade}_${subject}`;
+    const sessionId = this.getUserSessionId();
+    const key = `${sessionId}_${grade}_${subject}`;
     const stored = localStorage.getItem(`completedSets_${key}`);
     return stored ? new Set(JSON.parse(stored)) : new Set();
   },
   
-  // Mark a set as completed
-  markSetCompleted(grade, subject, setNumber) {
-    const key = `${grade}_${subject}`;
-    const completedSets = this.getCompletedSets(grade, subject);
-    completedSets.add(setNumber);
-    localStorage.setItem(`completedSets_${key}`, JSON.stringify([...completedSets]));
+  // Get currently active sets (being used by other users)
+  getActiveSets(grade, subject) {
+    const key = `activeSets_${grade}_${subject}`;
+    const stored = localStorage.getItem(key);
+    const activeSets = stored ? JSON.parse(stored) : {};
+    
+    // Clean up expired sessions (older than 30 minutes)
+    const now = Date.now();
+    const cleanedActiveSets = {};
+    for (const [sessionId, data] of Object.entries(activeSets)) {
+      if (now - data.timestamp < 30 * 60 * 1000) { // 30 minutes
+        cleanedActiveSets[sessionId] = data;
+      }
+    }
+    
+    // Save cleaned data back
+    localStorage.setItem(key, JSON.stringify(cleanedActiveSets));
+    return cleanedActiveSets;
   },
   
-  // Get available sets for current subject/grade
+  // Mark a set as currently being used
+  markSetActive(grade, subject, setNumber) {
+    const sessionId = this.getUserSessionId();
+    const key = `activeSets_${grade}_${subject}`;
+    const activeSets = this.getActiveSets(grade, subject);
+    
+    activeSets[sessionId] = {
+      setNumber: setNumber,
+      timestamp: Date.now()
+    };
+    
+    localStorage.setItem(key, JSON.stringify(activeSets));
+    console.log(`Session ${sessionId} is now using set ${setNumber}`);
+  },
+  
+  // Release a set when quiz is completed or abandoned
+  releaseSet(grade, subject) {
+    const sessionId = this.getUserSessionId();
+    const key = `activeSets_${grade}_${subject}`;
+    const activeSets = this.getActiveSets(grade, subject);
+    
+    if (activeSets[sessionId]) {
+      delete activeSets[sessionId];
+      localStorage.setItem(key, JSON.stringify(activeSets));
+      console.log(`Session ${sessionId} released their set`);
+    }
+  },
+  
+  // Mark a set as completed for current user
+  markSetCompleted(grade, subject, setNumber) {
+    const sessionId = this.getUserSessionId();
+    const key = `${sessionId}_${grade}_${subject}`;
+    const completedSets = this.getCompletedSets(grade, subject);
+    completedSets.add(setNumber);
+    localStorage.setItem(key, JSON.stringify([...completedSets]));
+    
+    // Release the set from active usage
+    this.releaseSet(grade, subject);
+  },
+  
+  // Get available sets for current user, avoiding conflicts with other users
   getAvailableSets(grade, subject, totalSets = 3) {
     const completedSets = this.getCompletedSets(grade, subject);
+    const activeSets = this.getActiveSets(grade, subject);
+    const sessionId = this.getUserSessionId();
+    
+    // Get sets currently being used by other users
+    const usedByOthers = new Set();
+    for (const [otherSessionId, data] of Object.entries(activeSets)) {
+      if (otherSessionId !== sessionId) {
+        usedByOthers.add(data.setNumber);
+      }
+    }
+    
     const availableSets = [];
     
+    // Find sets that are not completed by this user and not being used by others
     for (let i = 1; i <= totalSets; i++) {
-      if (!completedSets.has(i)) {
+      if (!completedSets.has(i) && !usedByOthers.has(i)) {
         availableSets.push(i);
       }
     }
     
-    // If all sets are completed, reset and start fresh
+    console.log('Set availability:', {
+      completed: [...completedSets],
+      usedByOthers: [...usedByOthers],
+      available: availableSets
+    });
+    
+    // If no sets are available (all completed or in use), reset completed sets
     if (availableSets.length === 0) {
-      this.resetCompletedSets(grade, subject);
-      return [1, 2, 3]; // Return all sets
+      // Check if all sets are just being used by others
+      const allCompleted = completedSets.size === totalSets;
+      if (allCompleted) {
+        this.resetCompletedSets(grade, subject);
+        // Recalculate available sets after reset
+        const resetAvailable = [];
+        for (let i = 1; i <= totalSets; i++) {
+          if (!usedByOthers.has(i)) {
+            resetAvailable.push(i);
+          }
+        }
+        return resetAvailable.length > 0 ? resetAvailable : [1]; // Fallback to set 1
+      }
+      
+      // If sets are just being used by others, wait or use any available
+      return [1, 2, 3].filter(set => !usedByOthers.has(set));
     }
     
     return availableSets;
   },
   
-  // Reset completed sets for a subject/grade
+  // Reset completed sets for current user
   resetCompletedSets(grade, subject) {
-    const key = `${grade}_${subject}`;
-    localStorage.removeItem(`completedSets_${key}`);
+    const sessionId = this.getUserSessionId();
+    const key = `${sessionId}_${grade}_${subject}`;
+    localStorage.removeItem(key);
+  },
+  
+  // Clean up when user leaves (call on page unload)
+  cleanup(grade, subject) {
+    this.releaseSet(grade, subject);
   }
 };
 
@@ -93,9 +192,11 @@ async function loadQuestions(){
     if(!res.ok) throw new Error('Failed to fetch questions.json');
     const all = await res.json();
     state.questions = Array.isArray(all) ? all : [];
+    console.log(`Loaded ${state.questions.length} questions from questions.json`);
   } catch(e){
-    console.error(e);
+    console.error('Error loading questions:', e);
     state.questions = [];
+    alert('Failed to load questions. Please refresh the page.');
   }
 }
 
@@ -104,7 +205,7 @@ function startQuiz(){
   const availableSets = setTracker.getAvailableSets(state.grade, state.subject);
   
   if(availableSets.length === 0){
-    alert('No available question sets. All sets have been completed.');
+    alert('No available question sets. All sets are currently being used by other users or completed. Please try again in a moment.');
     window.history.back();
     return;
   }
@@ -113,26 +214,36 @@ function startQuiz(){
   const selectedSet = availableSets[Math.floor(Math.random() * availableSets.length)];
   state.currentSet = selectedSet;
   
+  // Mark this set as active for this user session
+  setTracker.markSetActive(state.grade, state.subject, selectedSet);
+  
   console.log(`Selected set ${selectedSet} for ${state.grade} ${state.subject}`);
   
-  // Filter questions by difficulty, grade, subject, and set
-  // For advanced grades (11, 12), use 'advanced' difficulty
-  const effectiveDifficulty = (state.grade === 'Grade 11' || state.grade === 'Grade 12') ? 'advanced' : state.difficulty;
-  
+  // Filter questions by grade, subject, and set
+  // Use flexible difficulty matching to handle mixed difficulty levels in question sets
   const filtered = state.questions.filter(q => 
-    q.difficulty === effectiveDifficulty &&
     q.grade === state.grade &&
     q.subject === state.subject &&
     q.id.includes(`_set${selectedSet}_`)
   );
   
+  console.log(`Found ${filtered.length} questions for ${state.grade} ${state.subject} set ${selectedSet}`);
+  
   if(filtered.length === 0){
-    alert(`No questions found for set ${selectedSet} of this selection.`);
+    console.error(`No questions found for: grade="${state.grade}", subject="${state.subject}", set=${selectedSet}`);
+    console.log('Available questions:', state.questions.length);
+    alert(`No questions found for set ${selectedSet} of this selection.\nLooking for: grade="${state.grade}", subject="${state.subject}"`);
     window.history.back();
     return;
   }
   
-  // Shuffle and select 10 questions from the chosen set
+  // Ensure we have at least 10 questions, if not, use all available and adjust total
+  if (filtered.length < state.totalQuestions) {
+    console.warn(`Only ${filtered.length} questions available for this set, adjusting total`);
+    state.totalQuestions = filtered.length;
+  }
+  
+  // Shuffle and select questions from the chosen set
   state.quizQuestions = shuffleArray([...filtered]).slice(0, state.totalQuestions);
   state.currentQuizIndex = 0;
   state.correctAnswers = 0;
@@ -140,7 +251,15 @@ function startQuiz(){
 }
 
 function renderQuizQuestion(){
+  console.log(`Rendering question ${state.currentQuizIndex + 1} of ${state.quizQuestions.length}`);
+  
   if(state.currentQuizIndex >= state.quizQuestions.length){
+    showQuizResults();
+    return;
+  }
+  
+  if(!state.quizQuestions[state.currentQuizIndex]) {
+    console.error('Question not found at index:', state.currentQuizIndex);
     showQuizResults();
     return;
   }
@@ -217,6 +336,8 @@ function nextQuestion(){
 }
 
 function showQuizResults(){
+  console.log(`Quiz completed: ${state.correctAnswers}/${state.totalQuestions} questions answered`);
+  
   const percentage = Math.round((state.correctAnswers / state.totalQuestions) * 100);
   
   // Mark the current set as completed
@@ -225,10 +346,22 @@ function showQuizResults(){
     console.log(`Marked set ${state.currentSet} as completed for ${state.grade} ${state.subject}`);
   }
   
-  elements.questionText.textContent = `Quiz Complete! You scored ${state.correctAnswers}/${state.totalQuestions} (${percentage}%)`;
+  // Clear any running timer
+  if(state.timer) {
+    clearInterval(state.timer);
+  }
+  
+  elements.questionText.innerHTML = `
+    <div style="text-align: center;">
+      <h2>Quiz Complete! 🎉</h2>
+      <p>You scored <strong>${state.correctAnswers}/${state.totalQuestions}</strong> (${percentage}%)</p>
+      <button onclick="window.location.href='index.html'" class="primary" style="margin-top: 20px;">Take Another Quiz</button>
+    </div>
+  `;
   elements.options.innerHTML = '';
   elements.progressFill.style.width = '100%';
   elements.timerCircle.style.display = 'none';
+  elements.counter.textContent = `${state.totalQuestions} / ${state.totalQuestions}`;
 }
 
 function shuffleArray(arr){
@@ -292,8 +425,39 @@ function burstConfetti(){
 }
 
 (async function init(){
+  console.log('Initializing quiz...');
   bindUI();
   parseParams();
+  
+  console.log('Quiz parameters:', { grade: state.grade, subject: state.subject, difficulty: state.difficulty });
+  
+  if (!state.grade || !state.subject) {
+    alert('Missing quiz parameters. Redirecting to main page.');
+    window.location.href = 'index.html';
+    return;
+  }
+  
+  // Add cleanup handlers for when user leaves
+  window.addEventListener('beforeunload', () => {
+    if (state.grade && state.subject) {
+      setTracker.cleanup(state.grade, state.subject);
+    }
+  });
+  
+  // Also cleanup on page visibility change (mobile browsers)
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden && state.grade && state.subject) {
+      setTracker.cleanup(state.grade, state.subject);
+    }
+  });
+  
   await loadQuestions();
+  
+  if (state.questions.length === 0) {
+    alert('No questions available. Please try again later.');
+    window.location.href = 'index.html';
+    return;
+  }
+  
   startQuiz();
 })();
