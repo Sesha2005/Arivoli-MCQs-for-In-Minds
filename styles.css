@@ -33,8 +33,16 @@ body{
 .segmented-btn.active{background:#ffffff;color:var(--text);box-shadow:0 1px 2px #00000010}
 .board{flex:1;display:flex;align-items:center;justify-content:center;padding:0 16px}
 .question-card{width:min(1100px,100%);background:var(--card);border:2px solid var(--border);border-radius:20px;padding:18px;box-shadow:0 10px 20px #00000010}
-.meta{display:flex;justify-content:space-between;color:var(--muted);font-weight:600}
-.question{font-size:28px;line-height:1.2;margin:16px 0 12px}
+.meta { display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-weight: 600; margin: 0; position: relative; z-index: 1; }
+
+#counter {
+    display: block;
+    text-align: left;
+    margin-left: 20px; /* Adjust value as needed */
+    font-weight: 600;
+}
+
+.question{font-size:28px;line-height:1.2;margin:16px 0 12px;padding:0 20px}
 .options{display:grid;gap:10px;grid-template-columns:1fr;}
 .option{border:1px solid var(--border);background:#ffffff;color:var(--text);border-radius:14px;padding:14px;display:flex;gap:10px;align-items:flex-start;justify-content:flex-start;text-align:left;cursor:pointer;touch-action:manipulation}
 .options,.option span{ text-align:left }
@@ -366,11 +374,11 @@ body{
 .level-card[data-diff].selected { outline: 4px solid #ffffff; outline-offset: 2px; filter: brightness(1); }
 
 /* Quiz UI */
-.quiz-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;gap:16px}
+.quiz-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;gap:5px}
 .progress-container{flex:1;display:flex;align-items:center;gap:12px}
 .progress-bar{flex:1;height:8px;background:#e5e7eb;border-radius:4px;overflow:hidden}
 .progress-fill{height:100%;background:var(--accent);border-radius:4px;transition:width 0.3s ease;width:0%}
-.progress-text{font-weight:600;color:var(--text);min-width:40px;text-align:right}
+.progress-text{font-weight:10;color:var(--bg);min-width:1px;text-align:right;font-size:1px}
 .timer-container{display:flex;flex-direction:column;align-items:center;gap:8px}
 .timer-circle{width:64px;height:64px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 0 0 4px #ffffff, 0 0 0 8px var(--accent);}
 .timer-text{color:#ffffff;font-weight:800;font-size:20px}
@@ -427,17 +435,101 @@ body{
   opacity:1;
 }
 
-/* Make sparkles extra vibrant */
+/* make sparkles extra vibrant */
 .sparkle{box-shadow:0 0 0 2px #ffffff22, 0 0 10px #ffffff55;mix-blend-mode:screen;will-change:transform,opacity}
 
-/* Star Rating System */
-.star-container {
+/* Grade and Subject Display */
+.grade-subject-display {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-  margin: 20px 0;
+  gap: 40px;
+  margin-bottom: 4px;
+  padding: 0 20px;
 }
+
+.grade-label, .subject-label {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.label-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2e7d32;
+  position: relative;
+}
+
+
+.label-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  text-transform: capitalize;
+}
+
+/* --- Star glow & animation --- */
+.star-container { 
+  display: flex; 
+  gap: 6px; 
+  justify-content: center; 
+  margin: 10px 0; 
+  align-items: center; 
+}
+
+.star-container svg {
+  width: 36px; 
+  height: 36px;
+  display: block;
+  will-change: transform, filter;
+  transition: transform 220ms ease, filter 220ms ease, opacity 220ms ease;
+}
+
+/* filled stars pulse with a golden glow */
+.star-full svg,
+.star-half svg {
+  filter: drop-shadow(0 0 6px rgba(255,215,0,0.85));
+  animation: starGlow 1.8s ease-in-out infinite;
+}
+
+/* half stars get a slightly milder glow */
+.star-half svg {
+  filter: drop-shadow(0 0 5px rgba(255,215,0,0.75));
+  opacity: 0.98;
+}
+
+/* empty stars are muted */
+.star-empty svg {
+  filter: none;
+  opacity: 0.45;
+  transform: scale(0.98);
+}
+
+/* hover (if you want interactivity when hovering the score area) */
+.star-container:hover .star-full svg,
+.star-container:hover .star-half svg {
+  transform: scale(1.06);
+  filter: drop-shadow(0 0 12px rgba(255,215,0,0.95));
+}
+
+/* subtle pulsing glow keyframes */
+@keyframes starGlow {
+  0% {
+    filter: drop-shadow(0 0 3px rgba(255,215,0,0.6));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(255,215,0,0.95));
+    transform: scale(1.09);
+  }
+  100% {
+    filter: drop-shadow(0 0 3px rgba(255,215,0,0.6));
+    transform: scale(1);
+  }
+}
+
+/* make sure SVG star shapes use crisp edges on different displays */
+.star-container svg path { shape-rendering: geometricPrecision; }
+
 
 .star {
   font-size: 28px;

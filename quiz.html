@@ -20,12 +20,22 @@
 
         <main class="board" aria-live="polite">
             <section class="question-card" id="question-card">
+                <div class="grade-subject-display">
+                    <div class="grade-label">
+                        <span class="label-text">Grade (வகுப்பு):</span>
+                        <span class="label-value" id="grade-display">-</span>
+                    </div>
+                    <div class="subject-label">
+                        <span class="label-text">Subject (துறை):</span>
+                        <span class="label-value" id="subject-display">-</span>
+                    </div>
+                </div>
                 <div class="quiz-header">
                     <div class="progress-container">
                         <div class="progress-bar">
                             <div class="progress-fill" id="progress-fill"></div>
                         </div>
-                        <span class="progress-text" id="progress-text">1/10</span>
+                        <span class="progress-text" id="progress-text">    1/10</span>
                     </div>
                     <div class="timer-container">
                         <div class="timer-circle" id="timer-circle">
@@ -34,7 +44,7 @@
                     </div>
                 </div>
                 <div class="meta">
-                    <span id="counter">1 / 10</span>
+                    <span id="counter">     1 / 10</span>
                 </div>
                 <h1 class="question" id="question-text">Loading…</h1>
                 <div class="options" id="options"></div>
@@ -47,6 +57,15 @@
         <div id="confetti-root"></div>
         <div id="celebrate-overlay" class="celebrate-overlay" hidden></div>
         <div id="celebrate" class="celebrate" hidden></div>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    Designed and Developed by RMK Engineering College
+                </div>
+            </div>
+        </footer>
     </div>
 
     <script src="quiz.js?v=4&t=1736183579" defer></script>

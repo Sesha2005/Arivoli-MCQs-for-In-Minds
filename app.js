@@ -1,6 +1,6 @@
 // Core state
 const state = {
-  language: localStorage.getItem('lang') || 'en',
+  language: 'en',
   difficulty: localStorage.getItem('diff') || 'beginner',
   grade: null,
   subject: null,
@@ -220,7 +220,7 @@ const elements = {
   avatarSection: document.getElementById('avatar-select'),
   avatars: document.getElementById('avatars'),
   avatarTitle: document.getElementById('avatar-title'),
-  avatarContinue: document.getElementById('avatar-continue'),
+  // avatarContinue: document.getElementById('avatar-continue'), // Removed continue button
   gradeSection: document.getElementById('grade-select'),
   grades: document.getElementById('grades'),
   gradeTitle: document.getElementById('grade-title'),
@@ -253,7 +253,7 @@ const TEXTS = {
     subjectTitle: 'Choose your subject',
     welcome: {
       title: 'Arivoli',
-      subtitle: 'MCQs for Young Minds — explore Science and level up as you learn!',
+      subtitle: 'MCQs for Young Minds — Explore science and level up as you learn!',
       beginBtn: "Let's Begin ",
       featureLevels: {
         title: 'Three Levels',
@@ -286,18 +286,18 @@ const TEXTS = {
   },
   ta: {
     back: '⟵ பின்',
-    avatarTitle: 'உங்கள் அவதாரத்தை தேர்வு செய்யுங்கள்',
+    avatarTitle: 'உங்கள் தோற்றத்தைத் தேர்வு செய்யுங்கள்',
     continue: 'தொடரவும்',
     levelTitle: 'உங்கள் நிலையை தேர்வு செய்யுங்கள்',
     gradeTitle: 'உங்கள் வகுப்பை தேர்வு செய்யுங்கள்',
     subjectTitle: 'உங்கள் பாடத்தை தேர்வு செய்யுங்கள்',
     welcome: {
       title: 'அறிவொளி',
-      subtitle: 'இளம் மனங்களுக்கான பல்வேறு தேர்வுகள் — அறிவியலை ஆராய்ந்து கற்றுக்கொள்ளுங்கள்!',
+      subtitle: 'அறிவியலை நுட்பமாக கற்றுக்கொள்ள வினாடி வினா!',
       beginBtn: 'தொடங்குவோம் ',
       featureLevels: {
         title: 'மூன்று நிலைகள்',
-        desc: 'தொடக்க, இடைநிலை, மேல்நிலை'
+        desc: 'தொடக்க நிலை, இடைநிலை, மேல்நிலை'
       },
       featureBadges: {
         title: 'அறிவியல் துறைகள்',
@@ -858,7 +858,12 @@ function bindUI(){
     if(elements.landing && !elements.landing.hidden){
       // From level back to avatar selection
       showAvatarSelection();
-      elements.backBtn.hidden = true; // on avatar screen, hide back
+      elements.backBtn.hidden = false; // on avatar screen, show back
+      return;
+    }
+    if(elements.avatarSection && !elements.avatarSection.hidden){
+      // From avatar back to welcome page
+      showWelcomePage();
       return;
     }
   });
@@ -970,10 +975,10 @@ function onAvatarClick(e){
   // toggle visual selection
   elements.avatars.querySelectorAll('.avatar-card').forEach(btn=>btn.classList.remove('selected'));
   target.classList.add('selected');
-  // enable continue button
-  if(elements.avatarContinue){
-    elements.avatarContinue.disabled = false;
-  }
+  // automatically proceed to level selection after a brief delay
+  setTimeout(() => {
+    goToLevelFromAvatar();
+  }, 300);
 }
 
 function goToLevelFromAvatar(){
@@ -993,17 +998,10 @@ function showAvatarSelection(){
   elements.gradeSection && (elements.gradeSection.hidden = true);
   elements.subjectSection && (elements.subjectSection.hidden = true);
   elements.questionCard.hidden = true;
-  elements.backBtn.hidden = true;
+  elements.backBtn.hidden = false; // Show back button on avatar page
   // localized labels
   applyLanguage();
-  if(elements.avatarContinue){
-    elements.avatarContinue.disabled = true;
-    // remove previous listeners to avoid stale references
-    const newBtn = elements.avatarContinue.cloneNode(true);
-    elements.avatarContinue.parentNode.replaceChild(newBtn, elements.avatarContinue);
-    elements.avatarContinue = newBtn;
-    elements.avatarContinue.addEventListener('click', goToLevelFromAvatar);
-  }
+  // Continue button removed - avatar selection now auto-proceeds
 }
 
 function showWelcomePage(){
@@ -1037,7 +1035,7 @@ function applyWelcomeLanguage(){
 function applyLanguage(){
   if(elements.backBtn) elements.backBtn.textContent = TEXTS[state.language].back;
   if(elements.avatarTitle) elements.avatarTitle.textContent = TEXTS[state.language].avatarTitle;
-  if(elements.avatarContinue) elements.avatarContinue.textContent = TEXTS[state.language].continue;
+  // Avatar continue button removed
   
   // Apply welcome page language
   applyWelcomeLanguage();
