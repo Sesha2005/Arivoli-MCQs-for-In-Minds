@@ -371,11 +371,13 @@ body{
 .progress-bar{flex:1;height:8px;background:#e5e7eb;border-radius:4px;overflow:hidden}
 .progress-fill{height:100%;background:var(--accent);border-radius:4px;transition:width 0.3s ease;width:0%}
 .progress-text{font-weight:600;color:var(--text);min-width:40px;text-align:right}
-.timer-container{display:flex;align-items:center}
+.timer-container{display:flex;flex-direction:column;align-items:center;gap:8px}
 .timer-circle{width:64px;height:64px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;position:relative;box-shadow:0 0 0 4px #ffffff, 0 0 0 8px var(--accent);}
 .timer-text{color:#ffffff;font-weight:800;font-size:20px}
 .timer-circle.warning{background:var(--warning)}
 .timer-circle.danger{background:var(--danger)}
+.streak-display{text-align:center}
+.streak-display #streak{font-size:12px;font-weight:600;color:var(--muted)}
 
 /* Confetti / Sparkles */
 #confetti-root{position:fixed;left:0;top:0;width:100vw;height:100vh;pointer-events:none;z-index:9999;overflow:visible}
@@ -427,3 +429,33 @@ body{
 
 /* Make sparkles extra vibrant */
 .sparkle{box-shadow:0 0 0 2px #ffffff22, 0 0 10px #ffffff55;mix-blend-mode:screen;will-change:transform,opacity}
+
+/* Star Rating System */
+.star-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin: 20px 0;
+}
+
+.star {
+  font-size: 28px;
+  color: #d1d5db;
+  transition: color 0.3s ease;
+}
+
+.star.filled {
+  color: #fbbf24;
+}
+
+.star:not(.filled) {
+  color: #d1d5db !important;
+}
+
+.performance-message {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  margin: 12px 0;
+}

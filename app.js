@@ -452,6 +452,9 @@ function renderQuizQuestion(){
   elements.progressText.textContent = `${state.currentQuizIndex + 1}/${state.totalQuestions}`;
   elements.counter.textContent = `${state.currentQuizIndex + 1} / ${state.totalQuestions}`;
   
+  // Update streak display
+  if(elements.streak) elements.streak.textContent = `Streak: ${state.streak}`;
+  
   // Reset timer
   state.timeLeft = 30;
   startTimer();
@@ -512,6 +515,12 @@ function onQuizSelect(idx){
   
   if(correct){
     state.correctAnswers++;
+    state.streak++;
+    localStorage.setItem('streak', state.streak.toString());
+    showCongrats();
+  } else {
+    state.streak = 0;
+    localStorage.setItem('streak', '0');
   }
   
   // Show correct/incorrect answers
@@ -520,6 +529,9 @@ function onQuizSelect(idx){
     if(i === q.answerIndex){ b.classList.add('correct'); }
     if(i === idx && !correct){ b.classList.add('wrong'); }
   });
+  
+  // Update streak display
+  if(elements.streak) elements.streak.textContent = `Streak: ${state.streak}`;
   
   elements.nextBtn.disabled = false;
   
@@ -607,63 +619,131 @@ function showNoQuestionsMessage(){
   elements.counter.textContent = '0 / 0';
 }
 
-function onSelect(idx){
-  if(state.locked) return;
+function onSelect(idx) {
+  if (state.locked) return;
   state.locked = true;
   const q = currentQuestion();
   const correct = idx === q.answerIndex;
-  
+
   // Mark this question as used to prevent repeats
   questionTracker.markUsed(q.id);
-  
+
   const optionButtons = Array.from(elements.options.querySelectorAll('.option'));
   optionButtons.forEach((b, i) => {
-    if(i === q.answerIndex){ b.classList.add('correct'); }
-    if(i === idx && !correct){ b.classList.add('wrong'); }
+    if (i === q.answerIndex) { b.classList.add('correct'); }
+    if (i === idx && !correct) { b.classList.add('wrong'); }
   });
-  
-  if(correct){
+
+  if (correct) {
     // Increment streak for correct answer
     state.streak++;
     localStorage.setItem('streak', state.streak.toString());
-    
+
     // Show congratulations message only for streaks of 2 or more
-    if(state.streak >= 2) {
-      showCongrats();
-    }
+    showCongrats();  
   } else {
     // Reset streak for incorrect answer
     state.streak = 0;
     localStorage.setItem('streak', '0');
   }
-  
+  console.log('Current streak:', state.streak);
   elements.nextBtn.disabled = false;
 }
 
 function showCongrats(){
   const streakCount = state.streak;
-  console.log('Showing congrats for streak:', streakCount);
+  let msgs;
   
-  const msgs = {
-    en: `Excellent! ${streakCount} in a row! 🔥`,
-    ta: `அருமை! ${streakCount} தொடர்ச்சி வெற்றி! 🔥`
-  };
-  
-  console.log('Toast element:', elements.toast);
-  console.log('Message:', msgs[state.language]);
-  
-  if(elements.toast) {
-    elements.toast.innerHTML = `<div style="background: #10b981; color: white; padding: 16px 24px; border-radius: 12px; font-weight: 600; text-align: center; box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);">${msgs[state.language]}</div>`;
-    elements.toast.hidden = false;
-    elements.toast.style.display = 'block';
-    
-    setTimeout(() => { 
-      elements.toast.hidden = true; 
-      elements.toast.style.display = 'none';
-    }, 3000);
+  if(streakCount === 2) {
+    msgs = {
+      en: `🎉 AMAZING! Two in a row! 🌟 You're on fire! 🔥`,
+      ta: `🎉 அற்புதம்! இரண்டு தொடர்ச்சி! 🌟 நீங்கள் சிறப்பாக செய்கிறீர்கள்! 🔥`
+    };
   } else {
-    console.error('Toast element not found!');
+    msgs = {
+      en: `🚀 INCREDIBLE! ${streakCount} in a row! 💫 Keep going champion! 🏆`,
+      ta: `🚀 நம்பமுடியாதது! ${streakCount} தொடர்ச்சி! 💫 தொடர்ந்து செய்யுங்கள் வீரர்! 🏆`
+    };
   }
+  
+  // Create the celebrate element if it doesn't exist
+  let celebrate = document.getElementById('celebrate');
+  if(!celebrate) {
+    celebrate = document.createElement('div');
+    celebrate.id = 'celebrate';
+    celebrate.className = 'celebrate';
+    celebrate.hidden = true;
+    document.body.appendChild(celebrate);
+  }
+  
+  celebrate.textContent = msgs[state.language];
+  celebrate.hidden = false;
+  celebrate.classList.add('show');
+  
+  // Create confetti burst
+  burstConfetti();
+  
+  setTimeout(()=>{
+    celebrate.classList.remove('show');
+    celebrate.hidden = true;
+  }, 1100);
+}
+
+function burstConfetti(){
+  // Create confetti root if it doesn't exist
+  let confettiRoot = document.getElementById('confetti-root');
+  if(!confettiRoot) {
+    confettiRoot = document.createElement('div');
+    confettiRoot.id = 'confetti-root';
+    confettiRoot.style.cssText = 'position:fixed;left:0;top:0;width:100vw;height:100vh;pointer-events:none;z-index:9999;overflow:visible';
+    document.body.appendChild(confettiRoot);
+  }
+  
+  confettiRoot.innerHTML = '';
+  const colors = ['#ff3b3b','#ff9f0a','#ffd60a','#32d74b','#0a84ff','#5e5ce6','#ff2d55','#64d2ff'];
+  const count = 260; // higher density
+  const centerX = window.innerWidth/2;
+  const centerY = window.innerHeight/2 - 80;
+  
+  for(let i=0;i<count;i++){
+    const p = document.createElement('div');
+    p.className = 'sparkle';
+    const angle = Math.random() * Math.PI * 2;
+    const radius = 240 + Math.random()*560;
+    const tx = Math.cos(angle) * radius + (Math.random()*40-20);
+    const ty = Math.sin(angle) * radius + (Math.random()*40-20);
+    p.style.left = centerX + 'px';
+    p.style.top = centerY + 'px';
+    p.style.setProperty('--tx', tx+'px');
+    p.style.setProperty('--ty', ty+'px');
+    p.style.background = colors[Math.floor(Math.random()*colors.length)];
+    confettiRoot.appendChild(p);
+  }
+  
+  // Show central appreciation message
+  if(celebrate){
+    celebrate.textContent = 'Great job! 🎉';
+    celebrate.hidden = false;
+    celebrate.classList.add('show');
+  }
+  
+  // Create overlay if it doesn't exist
+  let overlay = document.getElementById('celebrate-overlay');
+  if(!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'celebrate-overlay';
+    overlay.className = 'celebrate-overlay';
+    overlay.hidden = true;
+    document.body.appendChild(overlay);
+  }
+  
+  overlay.hidden = false;
+  
+  setTimeout(()=>{ 
+    if(confettiRoot) confettiRoot.innerHTML=''; 
+    if(celebrate){ celebrate.classList.remove('show'); celebrate.hidden = true; }
+    if(overlay){ overlay.hidden = true; }
+  }, 1100);
 }
 
 function nextQuestion(){

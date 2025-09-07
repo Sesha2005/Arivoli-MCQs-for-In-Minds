@@ -61,11 +61,10 @@
     },
     "options": [
       {"en": "Scale", "ta": "ஸ்கேல்"},
-      {"en": "Balance", "ta": "மாண்லீவு"},
+      {"en": "Balance", "ta": "தராசு"},
       {"en": "Bulb", "ta": "விளக்கு"},
-      {"en": "Clock", "ta": "கிளாக்"}
-    ],
-    "answerIndex": 3
+      {"en": "Clock", "ta": "கடிகாரம்"}
+    ],"answerIndex": 3
   },
   {
     "id": "phy6_set1_q5",
@@ -77,10 +76,10 @@
       "ta": "நீளத்தை அளக்க எதை பயன்படுத்துகிறோம்?"
     },
     "options": [
-      {"en": "Compass", "ta": "காம்பஸ்"},
+      {"en": "Compass", "ta": "திசைகாட்டி"},
       {"en": "Bulb", "ta": "விளக்கு"},
-      {"en": "Scale", "ta": "ஸ்கேல்"},
-      {"en": "Balance", "ta": "மாண்லீவு"}
+      {"en": "Scale", "ta": "அளவுகோல்"},
+      {"en": "Balance", "ta": "தராசு"}
     ],
     "answerIndex": 2
   },
@@ -94,10 +93,10 @@
       "ta": "எடையை அளக்க எதை பயன்படுத்துகிறோம்?"
     },
     "options": [
-      {"en": "Thermometer", "ta": "வெப்பமோட்டர்"},
-      {"en": "Balance", "ta": "மாண்லீவு"},
-      {"en": "Compass", "ta": "காம்பஸ்"},
-      {"en": "Clock", "ta": "கிளாக்"}
+      {"en": "Thermometer", "ta": "வெப்பமானி"},
+      {"en": "Balance", "ta": "தராசு"},
+      {"en": "Compass", "ta": "திசைகாட்டி"},
+      {"en": "Clock", "ta": "கடிகாரம்"}
     ],
     "answerIndex": 1
   },
@@ -112,8 +111,8 @@
     },
     "options": [
       {"en": "Table", "ta": "மேசை"},
-      {"en": "Fan", "ta": "பங்க"},
-      {"en": "Car", "ta": "கார்"},
+      {"en": "Fan", "ta": "விசிறி"},
+      {"en": "Car", "ta": "ஊர்தி"},
       {"en": "Bulb", "ta": "விளக்கு"}
     ],
     "answerIndex": 2
@@ -128,9 +127,9 @@
       "ta": "வாகனத்தில் எது தூரத்தை காட்டுகிறது?"
     },
     "options": [
-      {"en": "Clock", "ta": "கிளாக்"},
-      {"en": "Odometer", "ta": "ஒடோமீட்டர்"},
-      {"en": "Balance", "ta": "மாண்லீவு"},
+      {"en": "Clock", "ta": "கடிகாரம்"},
+      {"en": "Odometer", "ta": "தூரமானி"},
+      {"en": "Balance", "ta": "தராசு"},
       {"en": "Bulb", "ta": "விளக்கு"}
     ],
     "answerIndex": 1
@@ -145,10 +144,10 @@
       "ta": "எது ஒரே மாதிரியான இயக்கத்தை காட்டுகிறது?"
     },
     "options": [
-      {"en": "Man running fast then slow", "ta": "ஆண் வேகமாக பின்னர் மெதுவாக ஓடுகிறது"},
-      {"en": "Car stopping in traffic", "ta": "கார் போக்குவரத்து நிற்கிறது"},
-      {"en": "Dog moving zig-zag", "ta": "நாய் சிக்சாக நகர்கிறது"},
-      {"en": "Fan rotating at same speed", "ta": "ஒரே வேகத்தில் சுழலும் பங்கு"}
+      {"en": "Boy running fast and then slow", "ta": "சிறுவன் முதலில் வேகமாகவும் பின்னர் மெதுவாகவும் ஓடுவது"},
+      {"en": "Car which is going to stop", "ta": "நிற்கப் போகும் ஊர்தி"},
+      {"en": "Dog moving side to side", "ta": "நாய் இடது வலமாக நகர்வது"},
+      {"en": "Fan turning at same speed", "ta": "ஒரே வேகத்தில் சுழலும் விசிறி"}
     ],
     "answerIndex": 3
   },
@@ -165,7 +164,7 @@
       {"en": "Light and Heat", "ta": "ஒளி மற்றும் வெப்பம்"},
       {"en": "Weight and Height", "ta": "எடை மற்றும் உயரம்"},
       {"en": "Distance and Time", "ta": "தூரம் மற்றும் நேரம்"},
-      {"en": "Mass and Volume", "ta": "எடை மற்றும் அளவு"}
+      {"en": "Mass and Volume", "ta": "எடை மற்றும் கனவளவு"}
     ],
     "answerIndex": 2
   },

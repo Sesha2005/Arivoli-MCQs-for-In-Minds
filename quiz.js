@@ -1,4 +1,4 @@
-// Minimal standalone quiz runner for quiz.html
+// Minimal standalone quiz runner for quiz.html - Updated 2025-01-06 22:17
 const state = {
   language: localStorage.getItem('lang') || 'en',
   difficulty: localStorage.getItem('diff') || 'beginner',
@@ -340,10 +340,13 @@ function nextQuestion(){
   renderQuizQuestion();
 }
 
+
 function showQuizResults(){
   console.log(`Quiz completed: ${state.correctAnswers}/${state.totalQuestions} questions answered`);
+  console.log('Debug values:', { correctAnswers: state.correctAnswers, totalQuestions: state.totalQuestions });
   
   const percentage = Math.round((state.correctAnswers / state.totalQuestions) * 100);
+  console.log('Calculated percentage:', percentage);
   
   // Mark the current set as completed
   if(state.currentSet) {
@@ -356,10 +359,46 @@ function showQuizResults(){
     clearInterval(state.timer);
   }
   
+  // Create star rating based on percentage
+  let stars = '';
+  let message = '';
+  let starCount = 0;
+  
+  if (percentage >= 90) {
+    starCount = 5;
+    message = 'Excellent! Outstanding performance! 🌟';
+  } else if (percentage >= 70) {
+    starCount = 4;
+    message = 'Great job! Well done! 👏';
+  } else if (percentage >= 50) {
+    starCount = 3;
+    message = 'Good work! Keep practicing! 💪';
+  } else if (percentage >= 30) {
+    starCount = 2;
+    message = 'Keep trying! You can do it! 📚';
+  } else {
+    starCount = 1;
+    message = 'More study needed! Don\'t give up! 🎯';
+  }
+  
+  // Generate stars HTML
+  console.log('Star count should be:', starCount, 'for percentage:', percentage);
+  for (let i = 1; i <= 5; i++) {
+    if (i <= starCount) {
+      stars += '<span class="star filled">⭐</span>';
+      console.log(`Star ${i}: filled`);
+    } else {
+      stars += '<span class="star">⭐</span>';
+      console.log(`Star ${i}: empty`);
+    }
+  }
+  
   elements.questionText.innerHTML = `
     <div style="text-align: center;">
       <h2>Quiz Complete! 🎉</h2>
       <p>You scored <strong>${state.correctAnswers}/${state.totalQuestions}</strong> (${percentage}%)</p>
+      <div class="star-container">${stars}</div>
+      <div class="performance-message">${message}</div>
       <button onclick="window.location.href='index.html'" class="primary" style="margin-top: 20px;">Take Another Quiz</button>
     </div>
   `;
