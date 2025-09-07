@@ -485,10 +485,20 @@ function showQuizResults(){
     gradeSubjectDisplay.style.display = 'none';
   }
 
+  // Hide progress bar and counter on completion
+  const quizHeader = document.querySelector('.quiz-header');
+  if (quizHeader) {
+    quizHeader.style.display = 'none';
+  }
+  const metaSection = document.querySelector('.meta');
+  if (metaSection) {
+    metaSection.style.display = 'none';
+  }
+
   // Inject results into UI
   elements.questionText.innerHTML = `
     <div style="text-align: center;">
-      <h2>Quiz Complete! 🎉</h2>
+      <h2>Quiz Completed! 🎉</h2>
       <p>You scored <strong>${state.correctAnswers}/${state.totalQuestions}</strong> (${percentage}%)</p>
       ${starsHTML}
       <div class="performance-message" style="margin-top:8px;font-weight:700;color:var(--muted);">${message}</div>
@@ -496,9 +506,6 @@ function showQuizResults(){
     </div>
   `;
   elements.options.innerHTML = '';
-  elements.progressFill.style.width = '100%';
-  if (elements.timerCircle) elements.timerCircle.style.display = 'none';
-  elements.counter.textContent = `${state.totalQuestions} / ${state.totalQuestions}`;
 
   // ---------------------------
   // IMPORTANT: reset streak here so next quiz starts fresh
