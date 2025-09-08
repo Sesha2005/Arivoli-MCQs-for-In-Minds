@@ -631,3 +631,26 @@ body{
   text-align: center;
   margin: 12px 0;
 }
+
+/* Results page button styling */
+.secondary {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.secondary:hover {
+  background: #4a5568;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.secondary:active {
+  transform: translateY(0);
+}

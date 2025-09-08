@@ -5,14 +5,14 @@
     "grade": "Grade 6",
     "subject": "physics",
     "text": {
-      "en": "Which one shows length?",
-      "ta": "எது நீளத்தை காட்டுகிறது?"
+      "en": "Which one gives us heat and light?",
+      "ta": "எது வெப்பம் மற்றும் ஒளியை வழங்குகிறது?"
     },
     "options": [
-      {"en": "5 litre", "ta": "5 லிட்டர்"},
-      {"en": "5 kg", "ta": "5 கிலோ"},
-      {"en": "5 metre", "ta": "5 மீட்டர்"},
-      {"en": "5 second", "ta": "5 விநாடி"}
+      {"en": "Table", "ta": "மேசை"},
+      {"en": "Moon", "ta": "சந்திரன்"},
+      {"en": "Sun", "ta": "சூரியன்"},
+      {"en": "Starfish", "ta": "நட்சத்திர மீன்"}
     ],
     "answerIndex": 2
   },
@@ -39,91 +39,6 @@
     "grade": "Grade 6",
     "subject": "physics",
     "text": {
-      "en": "Which one shows time?",
-      "ta": "எது நேரத்தை காட்டுகிறது?"
-    },
-    "options": [
-      {"en": "2 kg", "ta": "2 கிலோ"},
-      {"en": "2 metre", "ta": "2 மீட்டர்"},
-      {"en": "2 hours", "ta": "2 மணி"},
-      {"en": "2 litre", "ta": "2 லிட்டர்"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set1_q4",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which one is used to see time?",
-      "ta": "நேரத்தை பார்க்க எதை பயன்படுத்துகிறோம்?"
-    },
-    "options": [
-      {"en": "Scale", "ta": "அளவுகோல்"},
-      {"en": "Balance", "ta": "தராசு"},
-      {"en": "Bulb", "ta": "விளக்கு"},
-      {"en": "Clock", "ta": "கடிகாரம்"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "phy6_set1_q5",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which one is used to measure length?",
-      "ta": "நீளத்தை அளக்க எதை பயன்படுத்துகிறோம்?"
-    },
-    "options": [
-      {"en": "Compass", "ta": "திசைகாட்டி"},
-      {"en": "Bulb", "ta": "விளக்கு"},
-      {"en": "Scale", "ta": "அளவுகோல்"},
-      {"en": "Balance", "ta": "தராசு"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set1_q6",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which one is used to measure mass?",
-      "ta": "எடையை அளக்க எதை பயன்படுத்துகிறோம்?"
-    },
-    "options": [
-      {"en": "Thermometer", "ta": "வெப்பமோட்டர்"},
-      {"en": "Balance", "ta": "தராசு"},
-      {"en": "Compass", "ta": "திசைகாட்டி"},
-      {"en": "Clock", "ta": "கடிகாரம்"}
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": "phy6_set1_q7",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which one moves on the road?",
-      "ta": "சாலையில் எது நகர்கிறது?"
-    },
-    "options": [
-      {"en": "Table", "ta": "மேசை"},
-      {"en": "Fan", "ta": "விசிறி"},
-      {"en": "Car", "ta": "கார்"},
-      {"en": "Bulb", "ta": "விளக்கு"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set1_q8",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
       "en": "Which one shows distance in a vehicle?",
       "ta": "வாகனத்தில் எது தூரத்தை காட்டுகிறது?"
     },
@@ -136,228 +51,7 @@
     "answerIndex": 1
   },
   {
-    "id": "phy6_set1_q9",
-    "difficulty": "moderate",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which one shows uniform motion?",
-      "ta": "எது ஒரே மாதிரியான இயக்கத்தை காட்டுகிறது?"
-    },
-    "options": [
-      {"en": "Man running fast then slow", "ta": "ஆண் வேகமாக பின்னர் மெதுவாக ஓடுகிறான்"},
-      {"en": "Car stopping in traffic", "ta": "கார் போக்குவரத்து நிற்கிறது"},
-      {"en": "Dog moving zig-zag", "ta": "நாய் சிக்சாக நகர்கிறது"},
-      {"en": "Fan rotating at same speed", "ta": "ஒரே வேகத்தில் சுழலும் விசிறி"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "phy6_set1_q10",
-    "difficulty": "moderate",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Speed depends on",
-      "ta": "வேகம் எதற்குப் பொருந்துகிறது?"
-    },
-    "options": [
-      {"en": "Light and Heat", "ta": "ஒளி மற்றும் வெப்பம்"},
-      {"en": "Weight and Height", "ta": "எடை மற்றும் உயரம்"},
-      {"en": "Distance and Time", "ta": "தூரம் மற்றும் நேரம்"},
-      {"en": "Mass and Volume", "ta": "எடை மற்றும் அளவு"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set2_q1",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which one gives us heat and light?",
-      "ta": "எது வெப்பம் மற்றும் ஒளியை வழங்குகிறது?"
-    },
-    "options": [
-      {"en": "Table", "ta": "மேசை"},
-      {"en": "Moon", "ta": "சந்திரன்"},
-      {"en": "Sun", "ta": "சூரியன்"},
-      {"en": "Starfish", "ta": "நட்சத்திர மீன்"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set2_q2",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which one is used to check temperature?",
-      "ta": "எதை பயன்படுத்தி வெப்பநிலையை பரிசோதிக்கிறோம்?"
-    },
-    "options": [
-      {"en": "Scale", "ta": "அளவுகோல்"},
-      {"en": "Thermometer", "ta": "வெப்பமோட்டர்"},
-      {"en": "Clock", "ta": "மணி"},
-      {"en": "Bulb", "ta": "விளக்கு"}
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": "phy6_set2_q3",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "At what temperature does water freeze?",
-      "ta": "நீர் எத்தனை டிகிரி செல்சியஸ் வெள்ளையாகும்?"
-    },
-    "options": [
-      {"en": "0°C", "ta": "0°C"},
-      {"en": "100°C", "ta": "100°C"},
-      {"en": "50°C", "ta": "50°C"},
-      {"en": "10°C", "ta": "10°C"}
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": "phy6_set2_q4",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "At what temperature does water boil?",
-      "ta": "நீர் எத்தனை டிகிரி செல்சியஸ் கதிமை அடைகிறது?"
-    },
-    "options": [
-      {"en": "25°C", "ta": "25°C"},
-      {"en": "10°C", "ta": "10°C"},
-      {"en": "0°C", "ta": "0°C"},
-      {"en": "100°C", "ta": "100°C"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "phy6_set2_q5",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which one glows with electricity?",
-      "ta": "எது மின்னெழுத்துடன் பிரகாசிக்கிறது?"
-    },
-    "options": [
-      {"en": "Ball", "ta": "பந்து"},
-      {"en": "Book", "ta": "புத்தகம்"},
-      {"en": "Chair", "ta": "நாற்காலி"},
-      {"en": "Bulb", "ta": "விளக்கு"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "phy6_set2_q6",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which one is a fuel?",
-      "ta": "எது எரிபொருள்?"
-    },
-    "options": [
-      {"en": "Petrol", "ta": "பெட்ரோல்"},
-      {"en": "Stone", "ta": "கல்"},
-      {"en": "Paper", "ta": "காகிதம்"},
-      {"en": "Sand", "ta": "மண்"}
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": "phy6_set2_q7",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which gas is most in the air?",
-      "ta": "வானிலில் அதிகமாக இருக்கும் வாயு எது?"
-    },
-    "options": [
-      {"en": "Helium", "ta": "ஹீலியம்"},
-      {"en": "Oxygen", "ta": "ஆக்சிஜன்"},
-      {"en": "Nitrogen", "ta": "நைட்ரஜன்"},
-      {"en": "Carbon dioxide", "ta": "கார்பன் டைஆக்சைடு"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set2_q8",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which gas do we need to live?",
-      "ta": "நாம் உயிருடன் இருக்க எந்த வாயு தேவை?"
-    },
-    "options": [
-      {"en": "Smoke", "ta": "புகை"},
-      {"en": "Nitrogen", "ta": "நைட்ரஜன்"},
-      {"en": "Oxygen", "ta": "ஆக்சிஜன்"},
-      {"en": "Carbon dioxide", "ta": "கார்பன் டைஆக்சைடு"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set2_q9",
-    "difficulty": "moderate",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Why do railway tracks have gaps?",
-      "ta": "உலகரயின் ரயில்பாதைகளில் இடைவெளிகள் ஏன் உள்ளன?"
-    },
-    "options": [
-      {"en": "For beauty", "ta": "அழகுக்காக"},
-      {"en": "To make noise", "ta": "சத்தம் உண்டாக்க"},
-      {"en": "To save iron", "ta": "உலோகம் சேமிக்க"},
-      {"en": "To allow expansion in heat", "ta": "வெப்பத்தில் விரிவாக்கம் ஏற்பட அனுமதிக்க"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "phy6_set2_q10",
-    "difficulty": "moderate",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Heat always flows from",
-      "ta": "வெப்பம் எப்போதும் எங்கிருந்து எங்கிற்கு செல்கிறது?"
-    },
-    "options": [
-      {"en": "Dark to Light", "ta": "இருண்ட இடத்திலிருந்து ஒளி இடத்திற்கு"},
-      {"en": "Hot to Cold", "ta": "சூடானது குளிருக்கு"},
-      {"en": "Cold to Hot", "ta": "குளிரானது சூடானது நோக்கி"},
-      {"en": "Light to Dark", "ta": "ஒளி இடத்திலிருந்து இருண்ட இடத்திற்கு"}
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": "phy6_set3_q1",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which material is attracted by a magnet?",
-      "ta": "எந்த பொருள் காந்தத்தால் ஈர்க்கப்படுகிறது?"
-    },
-    "options": [
-      {"en": "Plastic", "ta": "பிளாஸ்டிக்"},
-      {"en": "Wood", "ta": "மரம்"},
-      {"en": "Iron nail", "ta": "உலிநகம்"},
-      {"en": "Paper", "ta": "காகிதம்"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set3_q2",
+    "id": "phy6_set1_q4",
     "difficulty": "beginner",
     "grade": "Grade 6",
     "subject": "physics",
@@ -374,7 +68,212 @@
     "answerIndex": 2
   },
   {
-    "id": "phy6_set3_q3",
+    "id": "phy6_set1_q5",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which one is used to measure mass?",
+      "ta": "எடையை அளக்க எதை பயன்படுத்துகிறோம்?"
+    },
+    "options": [
+      {"en": "Thermometer", "ta": "வெப்பமோட்டர்"},
+      {"en": "Balance", "ta": "தராசு"},
+      {"en": "Compass", "ta": "திசைகாட்டி"},
+      {"en": "Clock", "ta": "கடிகாரம்"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set1_q6",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which one moves on the road?",
+      "ta": "சாலையில் எது நகர்கிறது?"
+    },
+    "options": [
+      {"en": "Table", "ta": "மேசை"},
+      {"en": "Fan", "ta": "விசிறி"},
+      {"en": "Car", "ta": "கார்"},
+      {"en": "Bulb", "ta": "விளக்கு"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set1_q7",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "At what temperature does water boil?",
+      "ta": "நீர் எத்தனை டிகிரி செல்சியஸ் கதிமை அடைகிறது?"
+    },
+    "options": [
+      {"en": "25°C", "ta": "25°C"},
+      {"en": "10°C", "ta": "10°C"},
+      {"en": "0°C", "ta": "0°C"},
+      {"en": "100°C", "ta": "100°C"}
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": "phy6_set1_q8",
+    "difficulty": "moderate",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which one shows uniform motion?",
+      "ta": "எது ஒரே மாதிரியான இயக்கத்தை காட்டுகிறது?"
+    },
+    "options": [
+      {"en": "Man running fast then slow", "ta": "ஆண் வேகமாக பின்னர் மெதுவாக ஓடுகிறான்"},
+      {"en": "Car stopping in traffic", "ta": "கார் போக்குவரத்து நிற்கிறது"},
+      {"en": "Dog moving zig-zag", "ta": "நாய் சிக்சாக நகர்கிறது"},
+      {"en": "Fan rotating at same speed", "ta": "ஒரே வேகத்தில் சுழலும் விசிறி"}
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": "phy6_set1_q9",
+    "difficulty": "moderate",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Why do railway tracks have gaps?",
+      "ta": "உலகரயின் ரயில்பாதைகளில் இடைவெளிகள் ஏன் உள்ளன?"
+    },
+    "options": [
+      {"en": "For beauty", "ta": "அழகுக்காக"},
+      {"en": "To make noise", "ta": "சத்தம் உண்டாக்க"},
+      {"en": "To save iron", "ta": "உலோகம் சேமிக்க"},
+      {"en": "To allow expansion in heat", "ta": "வெப்பத்தில் விரிவாக்கம் ஏற்பட அனுமதிக்க"}
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": "phy6_set1_q10",
+    "difficulty": "moderate",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Magnetism is a",
+      "ta": "காந்தவியல் என்பது"
+    },
+    "options": [
+      {"en": "Light force", "ta": "ஒளி சக்தி"},
+      {"en": "Contact force", "ta": "தொடர்பு சக்தி"},
+      {"en": "Sound force", "ta": "ஒலி சக்தி"},
+      {"en": "Non-contact force", "ta": "தொடர்பில்லா சக்தி"}
+    ],
+    "answerIndex": 3
+  },
+
+  {
+    "id": "phy6_set2_q1",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which one shows time?",
+      "ta": "எது நேரத்தை காட்டுகிறது?"
+    },
+    "options": [
+      {"en": "2 kg", "ta": "2 கிலோ"},
+      {"en": "2 metre", "ta": "2 மீட்டர்"},
+      {"en": "2 hours", "ta": "2 மணி"},
+      {"en": "2 litre", "ta": "2 லிட்டர்"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set2_q2",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which material is attracted by a magnet?",
+      "ta": "எந்த பொருள் காந்தத்தால் ஈர்க்கப்படுகிறது?"
+    },
+    "options": [
+      {"en": "Plastic", "ta": "பிளாஸ்டிக்"},
+      {"en": "Wood", "ta": "மரம்"},
+      {"en": "Iron nail", "ta": "உலிநகம்"},
+      {"en": "Paper", "ta": "காகிதம்"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set2_q3",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which one is used to see time?",
+      "ta": "நேரத்தை பார்க்க எதை பயன்படுத்துகிறோம்?"
+    },
+    "options": [
+      {"en": "Scale", "ta": "அளவுகோல்"},
+      {"en": "Balance", "ta": "தராசு"},
+      {"en": "Bulb", "ta": "விளக்கு"},
+      {"en": "Clock", "ta": "கடிகாரம்"}
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": "phy6_set2_q4",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which tool is used to find direction?",
+      "ta": "திசையை கண்டுபிட எது பயன்படுத்தப்படுகிறது?"
+    },
+    "options": [
+      {"en": "Compass", "ta": "காம்பஸ்"},
+      {"en": "Balance", "ta": "சரிபோலன்ஸ்"},
+      {"en": "Ruler", "ta": "கோல்"},
+      {"en": "Bulb", "ta": "விளக்கு"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set2_q5",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which gas do we need to live?",
+      "ta": "நாம் உயிருடன் இருக்க எந்த வாயு தேவை?"
+    },
+    "options": [
+      {"en": "Smoke", "ta": "புகை"},
+      {"en": "Nitrogen", "ta": "நைட்ரஜன்"},
+      {"en": "Oxygen", "ta": "ஆக்சிஜன்"},
+      {"en": "Carbon dioxide", "ta": "கார்பன் டைஆக்சைடு"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set2_q6",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which one is used to check temperature?",
+      "ta": "எதை பயன்படுத்தி வெப்பநிலையை பரிசோதிக்கிறோம்?"
+    },
+    "options": [
+      {"en": "Scale", "ta": "அளவுகோல்"},
+      {"en": "Thermometer", "ta": "வெப்பமோட்டர்"},
+      {"en": "Clock", "ta": "மணி"},
+      {"en": "Bulb", "ta": "விளக்கு"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set2_q7",
     "difficulty": "beginner",
     "grade": "Grade 6",
     "subject": "physics",
@@ -387,6 +286,109 @@
       {"en": "Vanish", "ta": "இல்லை"},
       {"en": "Repel", "ta": "தள்ளுகிறது"},
       {"en": "Mix", "ta": "கலக்கும்"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set2_q8",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which one glows with electricity?",
+      "ta": "எது மின்னெழுத்துடன் பிரகாசிக்கிறது?"
+    },
+    "options": [
+      {"en": "Ball", "ta": "பந்து"},
+      {"en": "Book", "ta": "புத்தகம்"},
+      {"en": "Chair", "ta": "நாற்காலி"},
+      {"en": "Bulb", "ta": "விளக்கு"}
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": "phy6_set2_q9",
+    "difficulty": "moderate",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Speed depends on",
+      "ta": "வேகம் எதற்குப் பொருந்துகிறது?"
+    },
+    "options": [
+      {"en": "Light and Heat", "ta": "ஒளி மற்றும் வெப்பம்"},
+      {"en": "Weight and Height", "ta": "எடை மற்றும் உயரம்"},
+      {"en": "Distance and Time", "ta": "தூரம் மற்றும் நேரம்"},
+      {"en": "Mass and Volume", "ta": "எடை மற்றும் அளவு"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set2_q10",
+    "difficulty": "moderate",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "A freely suspended magnet rests in",
+      "ta": "சுதந்திரமாக தொங்கிய காந்தம் எங்கும் அமைக்கிறது?"
+    },
+    "options": [
+      {"en": "Round direction", "ta": "சுற்று திசை"},
+      {"en": "East-West direction", "ta": "கிழக்கு-மேற்கு திசை"},
+      {"en": "Up-Down direction", "ta": "மேல்-கீழ் திசை"},
+      {"en": "North-South direction", "ta": "வடக்கு-தெற்கு திசை"}
+    ],
+    "answerIndex": 3
+  },
+
+  {
+    "id": "phy6_set3_q1",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which one is a fuel?",
+      "ta": "எது எரிபொருள்?"
+    },
+    "options": [
+      {"en": "Petrol", "ta": "பெட்ரோல்"},
+      {"en": "Stone", "ta": "கல்"},
+      {"en": "Paper", "ta": "காகிதம்"},
+      {"en": "Sand", "ta": "மண்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set3_q2",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "A magnet has",
+      "ta": "ஒரு காந்தத்திற்கு உள்ளது"
+    },
+    "options": [
+      {"en": "No pole", "ta": "துறை இல்லை"},
+      {"en": "Two poles", "ta": "இரு துறைகள்"},
+      {"en": "Three poles", "ta": "மூன்று துறைகள்"},
+      {"en": "One pole", "ta": "ஒரு துறை"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set3_q3",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {
+      "en": "Which gas is most in the air?",
+      "ta": "வானிலில் அதிகமாக இருக்கும் வாயு எது?"
+    },
+    "options": [
+      {"en": "Helium", "ta": "ஹீலியம்"},
+      {"en": "Oxygen", "ta": "ஆக்சிஜன்"},
+      {"en": "Nitrogen", "ta": "நைட்ரஜன்"},
+      {"en": "Carbon dioxide", "ta": "கார்பன் டைஆக்சைடு"}
     ],
     "answerIndex": 2
   },
@@ -413,16 +415,16 @@
     "grade": "Grade 6",
     "subject": "physics",
     "text": {
-      "en": "A magnet has",
-      "ta": "ஒரு காந்தத்திற்கு உள்ளது"
+      "en": "At what temperature does water freeze?",
+      "ta": "நீர் எத்தனை டிகிரி செல்சியஸ் வெள்ளையாகும்?"
     },
     "options": [
-      {"en": "No pole", "ta": "துறை இல்லை"},
-      {"en": "Two poles", "ta": "இரு துறைகள்"},
-      {"en": "Three poles", "ta": "மூன்று துறைகள்"},
-      {"en": "One pole", "ta": "ஒரு துறை"}
+      {"en": "0°C", "ta": "0°C"},
+      {"en": "100°C", "ta": "100°C"},
+      {"en": "50°C", "ta": "50°C"},
+      {"en": "10°C", "ta": "10°C"}
     ],
-    "answerIndex": 1
+    "answerIndex": 0
   },
   {
     "id": "phy6_set3_q6",
@@ -430,14 +432,14 @@
     "grade": "Grade 6",
     "subject": "physics",
     "text": {
-      "en": "Which tool is used to find direction?",
-      "ta": "திசையை கண்டுபிட எது பயன்படுத்தப்படுகிறது?"
+      "en": "What attracts iron objects without touching them?",
+      "ta": "தொட்டாமல் எரும்புப் பொருட்களை ஈர்க்கும் வான்மை எது?"
     },
     "options": [
-      {"en": "Compass", "ta": "காம்பஸ்"},
-      {"en": "Balance", "ta": "சரிபோலன்ஸ்"},
-      {"en": "Ruler", "ta": "கோல்"},
-      {"en": "Bulb", "ta": "விளக்கு"}
+      {"en": "Magnet", "ta": "காந்தம்"},
+      {"en": "Water", "ta": "தண்ணீர்"},
+      {"en": "Sun", "ta": "சூரியன்"},
+      {"en": "Air", "ta": "காற்று"}
     ],
     "answerIndex": 0
   },
@@ -447,68 +449,68 @@
     "grade": "Grade 6",
     "subject": "physics",
     "text": {
-      "en": "Which side of a magnet points North?",
-      "ta": "காந்தத்தின் எந்த பக்கம் வடக்கு நோக்குகிறது?"
+      "en": "What do we drink to stay alive?",
+      "ta": "வாழ்ந்து இருக்க நாம்போகும் எது?"
     },
     "options": [
-      {"en": "West pole", "ta": "மேற்கு துறை"},
-      {"en": "South pole", "ta": "தெற்கு துறை"},
-      {"en": "North pole", "ta": "வடக்கு துறை"},
-      {"en": "East pole", "ta": "கிழக்கு துறை"}
+      {"en": "Water", "ta": "தண்ணீர்"},
+      {"en": "Oil", "ta": "எண்ணெய்"},
+      {"en": "Milk", "ta": "பால்"},
+      {"en": "Juice", "ta": "ஜூஸ்"}
     ],
-    "answerIndex": 2
+    "answerIndex": 0
   },
   {
-    "id": "phy6_set3_q8",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Magnets lose power when",
-      "ta": "காந்தங்கள் சக்தியை இழக்கிறன எப்போது?"
+      "id": "phy6_set3_q8",
+      "difficulty": "beginner",
+      "grade": "Grade 6",
+      "subject": "physics",
+      "text": {
+        "en": "What do we feel when we touch something hot?",
+        "ta": "நம்மால் சூடான ஒன்றைத் தொடும் போது நாம் என்ன உணர்கிறோம்?"
+      },
+      "options": [
+        {"en": "Cold", "ta": "குளிர்ச்சி"},
+        {"en": "Hot", "ta": "சூடு"},
+        {"en": "Soft", "ta": "மென்மை"},
+        {"en": "Hard", "ta": "கடுமை"}
+      ],
+      "answerIndex": 1
     },
-    "options": [
-      {"en": "Painted", "ta": "நிறமாக்கப்பட்டு"},
-      {"en": "Heated or dropped", "ta": "வெப்பம் சேர்த்தல் அல்லது விழுதல்"},
-      {"en": "Polished", "ta": "பளிச்சம் செய்தல்"},
-      {"en": "Cleaned", "ta": "சுத்தம் செய்தல்"}
-    ],
-    "answerIndex": 1
+    {
+      "id": "phy6_set3_q9",
+      "difficulty": "beginner",
+      "grade": "Grade 6",
+      "subject": "physics",
+      "text": {
+        "en": "Which direction does water flow naturally?",
+        "ta": "நீர்வழக்கம் இயற்கையாக எந்தப் பக்கம் ஓடுகிறது?"
+      },
+      "options": [
+        {"en": "Upwards", "ta": "மேலே"},
+        {"en": "Downwards", "ta": "கீழே"},
+        {"en": "Sideways", "ta": "பக்கமாக"},
+        {"en": "Does not move", "ta": "செயல்படாது"}
+      ],
+      "answerIndex": 1
   },
   {
-    "id": "phy6_set3_q9",
-    "difficulty": "moderate",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Magnetism is a",
-      "ta": "காந்தவியல் என்பது"
-    },
-    "options": [
-      {"en": "Light force", "ta": "ஒளி சக்தி"},
-      {"en": "Contact force", "ta": "தொடர்பு சக்தி"},
-      {"en": "Sound force", "ta": "ஒலி சக்தி"},
-      {"en": "Non-contact force", "ta": "தொடர்பில்லா சக்தி"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "phy6_set3_q10",
-    "difficulty": "moderate",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "A freely suspended magnet rests in",
-      "ta": "சுதந்திரமாக தொங்கிய காந்தம் எங்கும் அமைக்கிறது?"
-    },
-    "options": [
-      {"en": "Round direction", "ta": "சுற்று திசை"},
-      {"en": "East-West direction", "ta": "கிழக்கு-மேற்கு திசை"},
-      {"en": "Up-Down direction", "ta": "மேல்-கீழ் திசை"},
-      {"en": "North-South direction", "ta": "வடக்கு-தெற்கு திசை"}
-    ],
-    "answerIndex": 3
-  },
+      "id": "phy6_set3_q10",
+      "difficulty": "beginner",
+      "grade": "Grade 6",
+      "subject": "physics",
+      "text": {
+        "en": "What do we use to see things far away clearly?",
+        "ta": "தூரத்தில் உள்ளவற்றை தெளிவாக பார்க்க நாம் எதைப் பயன்படுத்துகிறோம்?"
+      },
+      "options": [
+        {"en": "Microscope", "ta": "நுண்காணி"},
+        {"en": "Telescope", "ta": "தூரக்காணி"},
+        {"en": "Magnifying glass", "ta": "பூதக்கண்ணாடி"},
+        {"en": "Mirror", "ta": "கண்ணாடி"}
+      ],
+      "answerIndex": 1
+  }, 
   {
     "id": "chem6_set1_q1",
     "difficulty": "beginner",

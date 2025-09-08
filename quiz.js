@@ -506,7 +506,10 @@ function showQuizResults(){
       <div style="margin: 8px 0;">${starsHTML}</div>
       <div class="performance-message" style="margin: 8px 0; font-weight:700; color:var(--muted); font-size: 14px;">${message}</div>
       
-      <button onclick="window.location.href='index.html'" class="primary" style="margin-top: 15px; padding: 10px 20px;">Take Another Quiz</button>
+      <div style="display: flex; gap: 15px; justify-content: center; margin-top: 15px; flex-wrap: wrap;">
+        <button onclick="window.location.href='index.html'" class="primary" style="padding: 10px 20px;">Take Another Quiz</button>
+        <button onclick="window.open('https://scratch.mit.edu/projects/editor/', '_blank')" class="secondary" style="padding: 10px 20px; background: var(--secondary); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s ease;">🎮 Play Game</button>
+      </div>
     </div>
   `;
   elements.options.innerHTML = '';
