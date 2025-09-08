@@ -497,12 +497,16 @@ function showQuizResults(){
 
   // Inject results into UI
   elements.questionText.innerHTML = `
-    <div style="text-align: center;">
-      <h2>Quiz Completed! 🎉</h2>
-      <p>You scored <strong>${state.correctAnswers}/${state.totalQuestions}</strong> (${percentage}%)</p>
-      ${starsHTML}
-      <div class="performance-message" style="margin-top:8px;font-weight:700;color:var(--muted);">${message}</div>
-      <button onclick="window.location.href='index.html'" class="primary" style="margin-top: 20px;">Take Another Quiz</button>
+    <div style="text-align: center; padding: 10px 0; max-height: 80vh; overflow: hidden;">
+      <!-- Animation Container - Moved to top -->
+      <img src="videos/birdie.gif" alt="Quiz Completion Animation" class="completion-gif-small">
+      
+      <h2 style="margin: 10px 0; font-size: 24px;">Quiz Completed! 🎉</h2>
+      <p style="margin: 8px 0;">You scored <strong>${state.correctAnswers}/${state.totalQuestions}</strong> (${percentage}%)</p>
+      <div style="margin: 8px 0;">${starsHTML}</div>
+      <div class="performance-message" style="margin: 8px 0; font-weight:700; color:var(--muted); font-size: 14px;">${message}</div>
+      
+      <button onclick="window.location.href='index.html'" class="primary" style="margin-top: 15px; padding: 10px 20px;">Take Another Quiz</button>
     </div>
   `;
   elements.options.innerHTML = '';

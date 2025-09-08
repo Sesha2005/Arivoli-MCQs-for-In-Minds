@@ -438,6 +438,86 @@ body{
 /* make sparkles extra vibrant */
 .sparkle{box-shadow:0 0 0 2px #ffffff22, 0 0 10px #ffffff55;mix-blend-mode:screen;will-change:transform,opacity}
 
+/* Video Container Styles for Quiz Results */
+.result-video-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.video-placeholder {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: 2px dashed #cbd5e0;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.video-placeholder:hover {
+  border-color: var(--accent);
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+}
+
+/* Actual video styling when you add it */
+.result-video-container iframe,
+.result-video-container video {
+  width: 100%;
+  max-width: 560px;
+  height: 315px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+/* GIF animation styling */
+.completion-gif {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: none;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Small GIF animation styling - for top of page */
+.completion-gif-small {
+  max-width: 200px;
+  width: 200px;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+/* Responsive video container */
+@media (max-width: 768px) {
+  .result-video-container {
+    padding: 0 10px;
+  }
+  
+  .result-video-container iframe,
+  .result-video-container video {
+    height: 200px;
+  }
+  
+  .video-placeholder {
+    min-height: 150px;
+    padding: 30px 15px;
+  }
+}
+
 /* Grade and Subject Display */
 .grade-subject-display {
   display: flex;
