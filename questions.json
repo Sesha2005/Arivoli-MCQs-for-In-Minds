@@ -1,52 +1,43 @@
 [
   {
     "id": "phy6_set1_q1",
-    "difficulty": "beginner",
+    "difficulty": "moderate",
     "grade": "Grade 6",
     "subject": "physics",
-    "text": {
-      "en": "Which one gives us heat and light?",
-      "ta": "எது வெப்பம் மற்றும் ஒளியை வழங்குகிறது?"
-    },
+    "text": {"en": "Why are gaps left in railway tracks?", "ta": "ரயில் பாதைகளில் இடைவெளிகள் ஏன் வைக்கப்படுகின்றன?"},
     "options": [
-      {"en": "Table", "ta": "மேசை"},
-      {"en": "Moon", "ta": "சந்திரன்"},
-      {"en": "Sun", "ta": "சூரியன்"},
-      {"en": "Starfish", "ta": "நட்சத்திர மீன்"}
+      {"en": "For beauty", "ta": "அழகுக்காக"},
+      {"en": "To allow expansion in heat", "ta": "வெப்ப விரிவாக்கத்தை அனுமதிக்க"},
+      {"en": "To save iron", "ta": "இரும்பை சேமிக்க"},
+      {"en": "To make noise", "ta": "சத்தத்தை உருவாக்க"}
     ],
-    "answerIndex": 2
+    "answerIndex": 1
   },
   {
     "id": "phy6_set1_q2",
     "difficulty": "beginner",
     "grade": "Grade 6",
     "subject": "physics",
-    "text": {
-      "en": "Which one shows mass?",
-      "ta": "எது எடை காட்டுகிறது?"
-    },
+    "text": {"en": "Which gives us heat and light?", "ta": "எது நமக்கு வெப்பத்தையும் ஒளியையும் தருகிறது?"},
     "options": [
-      {"en": "20 metre", "ta": "20 மீட்டர்"},
-      {"en": "20 second", "ta": "20 விநாடி"},
-      {"en": "20 kg", "ta": "20 கிலோ"},
-      {"en": "20 litre", "ta": "20 லிட்டர்"}
+      {"en": "Sun", "ta": "சூரியன்"},
+      {"en": "Moon", "ta": "சந்திரன்"},
+      {"en": "Table", "ta": "மேசை"},
+      {"en": "Starfish", "ta": "நட்சத்திர மீன்"}
     ],
-    "answerIndex": 2
+    "answerIndex": 0
   },
   {
     "id": "phy6_set1_q3",
     "difficulty": "beginner",
     "grade": "Grade 6",
     "subject": "physics",
-    "text": {
-      "en": "Which one shows distance in a vehicle?",
-      "ta": "வாகனத்தில் எது தூரத்தை காட்டுகிறது?"
-    },
+    "text": {"en": "Which one shows uniform motion?", "ta": "எது சீரான இயக்கத்தைக் காட்டுகிறது?"},
     "options": [
-      {"en": "Clock", "ta": "கடிகாரம்"},
-      {"en": "Odometer", "ta": "ஒடோமீட்டர்"},
-      {"en": "Balance", "ta": "தராசு"},
-      {"en": "Bulb", "ta": "விளக்கு"}
+      {"en": "Car stopping at traffic", "ta": "போக்குவரத்தில் நிற்கும் மகிழுந்து"},
+      {"en": "Fan rotating at same speed", "ta": "ஒரே வேகத்தில் சுழலும் விசிறி"},
+      {"en": "Dog running zig-zag", "ta": "நெளிவரியாக ஓடும் நாய்"},
+      {"en": "small Boy running slow then fast", "ta": " மெதுவாக பின்னர் வேகமாக ஓடும் சிறுவன்"}
     ],
     "answerIndex": 1
   },
@@ -55,61 +46,331 @@
     "difficulty": "beginner",
     "grade": "Grade 6",
     "subject": "physics",
-    "text": {
-      "en": "Which one is a natural magnet?",
-      "ta": "எது இயற்கை காந்தம்?"
-    },
+    "text": {"en": "The SI unit of heat is", "ta": "வெப்பத்தின் எஸ்.ஐ அலகு எது?"},
     "options": [
-      {"en": "Gold", "ta": "தங்கம்"},
-      {"en": "Silver", "ta": "வெள்ளி"},
-      {"en": "Magnetite", "ta": "காந்தக்கல்"},
-      {"en": "Copper", "ta": "தாமிரம்"}
+      {"en": "Watt", "ta": "வாட்"},
+      {"en": "Kelvin", "ta": "கெல்வின்"},
+      {"en": "Newton", "ta": "நியூட்டன்"},
+      {"en": "Joule", "ta": "ஜூல்"}
     ],
-    "answerIndex": 2
+    "answerIndex": 3
   },
   {
     "id": "phy6_set1_q5",
     "difficulty": "beginner",
     "grade": "Grade 6",
     "subject": "physics",
-    "text": {
-      "en": "Which one is used to measure mass?",
-      "ta": "எடையை அளக்க எதை பயன்படுத்துகிறோம்?"
-    },
+    "text": {"en": "Which instrument is used to measure length?", "ta": "நீளத்தை அளக்க எது பயன்படுகிறது?"},
     "options": [
-      {"en": "Thermometer", "ta": "வெப்பமோட்டர்"},
-      {"en": "Balance", "ta": "தராசு"},
       {"en": "Compass", "ta": "திசைகாட்டி"},
-      {"en": "Clock", "ta": "கடிகாரம்"}
+      {"en": "Bulb", "ta": "விளக்கு"},
+      {"en": "Scale", "ta": "அளவுகோல்"},
+      {"en": "Balance", "ta": "தராசு"}
     ],
-    "answerIndex": 1
+    "answerIndex": 2
   },
   {
     "id": "phy6_set1_q6",
-    "difficulty": "beginner",
+    "difficulty": "moderate",
     "grade": "Grade 6",
     "subject": "physics",
-    "text": {
-      "en": "Which one moves on the road?",
-      "ta": "சாலையில் எது நகர்கிறது?"
-    },
+    "text": {"en": "Magnetism is a", "ta": "காந்தவியல் என்பது"},
     "options": [
-      {"en": "Table", "ta": "மேசை"},
-      {"en": "Fan", "ta": "விசிறி"},
-      {"en": "Car", "ta": "கார்"},
-      {"en": "Bulb", "ta": "விளக்கு"}
+      {"en": "Contact force", "ta": "தொடர்பு சக்தி"},
+      {"en": "Sound force", "ta": "ஒலி சக்தி"},
+      {"en": "Light force", "ta": "ஒளி சக்தி"},
+      {"en": "Non-contact force", "ta": "தொடர்பில்லா சக்தி"}
     ],
-    "answerIndex": 2
+    "answerIndex": 3
   },
   {
     "id": "phy6_set1_q7",
     "difficulty": "beginner",
     "grade": "Grade 6",
     "subject": "physics",
-    "text": {
-      "en": "At what temperature does water boil?",
-      "ta": "நீர் எத்தனை டிகிரி செல்சியஸ் கதிமை அடைகிறது?"
-    },
+    "text": {"en": "When water freezes, its temperature is", "ta": "நீர் உறையும்போது அதன் வெப்பநிலை எவ்வளவு?"},
+    "options": [
+      {"en": "100°C", "ta": "100°C"},
+      {"en": "10°C", "ta": "10°C"},
+      {"en": "0°C", "ta": "0°C"},
+      {"en": "50°C", "ta": "50°C"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set1_q8",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Which gas is most in the air?", "ta": "காற்றில் அதிகமாக உள்ள வாயு எது?"},
+    "options": [
+      {"en": "Nitrogen", "ta": "நைட்ரஜன்"},
+      {"en": "Helium", "ta": "ஹீலியம்"},
+      {"en": "Oxygen", "ta": "ஆக்சிஜன்"},
+      {"en": "Carbon dioxide", "ta": "கார்பன் டைஆக்சைடு"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set1_q9",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Which instrument is used to measure temperature?", "ta": "வெப்பநிலையை அளப்ப எந்த கருவி பயன்படுகிறது?"},
+    "options": [
+      {"en": "Clock", "ta": "கடிகாரம்"},
+      {"en": "Thermometer", "ta": "வெப்பமானி"},
+      {"en": "Scale", "ta": "அளவுகோல்"},
+      {"en": "Balance", "ta": "தராசு"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set1_q10",
+    "difficulty": "moderate",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Heat always flows from", "ta": "வெப்பம் எப்போதும் எங்கிருந்து எங்கு செல்கிறது?"},
+    "options": [
+      {"en": "Dark to Light", "ta": "இருளிலிருந்து ஒளிக்கு"},
+      {"en": "Light to Dark", "ta": "ஒளியிலிருந்து இருளுக்கு"},
+      {"en": "Hot to Cold", "ta": "சூடிலிருந்து குளிருக்கு"},
+      {"en": "Cold to Hot", "ta": "குளிரிலிருந்து சூடுக்கு"}
+    ],
+    "answerIndex": 2
+  },
+
+  {
+    "id": "phy6_set2_q1",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "The unit of force is", "ta": "வலுவின் அலகு எது?"},
+    "options": [
+      {"en": "Newton", "ta": "நியூட்டன்"},
+      {"en": "Pascal", "ta": "பாஸ்கல்"},
+      {"en": "Watt", "ta": "வாட்"},
+      {"en": "Joule", "ta": "ஜூல்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set2_q2",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Which part of vehicle shows distance?", "ta": "வாகனத்தில் தூரத்தை காட்டுவது எது?"},
+    "options": [
+      {"en": "Thermometer", "ta": "வெப்பமானி"},
+      {"en": "Compass", "ta": "திசைகாட்டி"},
+      {"en": "Odometer", "ta": "ஒடோமீட்டர்"},
+      {"en": "Clock", "ta": "கடிகாரம்"}
+    ],
+    "answerIndex": 2
+  },
+  {
+    "id": "phy6_set2_q3",
+    "difficulty": "moderate",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "A freely suspended magnet rests in", "ta": "சுதந்திரமாக தொங்கும் காந்தம் எங்கும் அமைவது?"},
+    "options": [
+      {"en": "East-West direction", "ta": "கிழக்கு-மேற்கு திசை"},
+      {"en": "Round direction", "ta": "சுற்று திசை"},
+      {"en": "Up-Down direction", "ta": "மேல்-கீழ் திசை"},
+      {"en": "North-South direction", "ta": "வடக்கு-தெற்கு திசை"}
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": "phy6_set2_q4",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "The SI unit of length is", "ta": "நீளத்தின் எஸ்.ஐ அலகு எது?"},
+    "options": [
+      {"en": "Second", "ta": "விநாடி"},
+      {"en": "Kilogram", "ta": "கிலோகிராம்"},
+      {"en": "Litre", "ta": "லிட்டர்"},
+      {"en": "Metre", "ta": "மீட்டர்"}
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": "phy6_set2_q5",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Which side of a magnet points North?", "ta": "காந்தத்தின் எந்த பக்கம் வடக்கு நோக்குகிறது?"},
+    "options": [
+      {"en": "North pole", "ta": "வடக்கு துறை"},
+      {"en": "South pole", "ta": "தெற்கு துறை"},
+      {"en": "East pole", "ta": "கிழக்கு துறை"},
+      {"en": "West pole", "ta": "மேற்கு துறை"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set2_q6",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Which one is a conductor?", "ta": "எது மின்சார ஓட்டியை கடத்தும் பொருள்?"},
+    "options": [
+      {"en": "Plastic", "ta": "பிளாஸ்டிக்"},
+      {"en": "Silver", "ta": "வெள்ளி"},
+      {"en": "Wood", "ta": "மரம்"},
+      {"en": "Rubber", "ta": "ரப்பர்"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set2_q7",
+    "difficulty": "moderate",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Magnets lose power when", "ta": "காந்தங்கள் சக்தியை எப்போது இழக்கின்றன?"},
+    "options": [
+      {"en": "Painted", "ta": "நிறமிடப்பட்டது"},
+      {"en": "Heated or dropped", "ta": "வெப்பப்படுத்தப்பட்டால் அல்லது கீழே விழுந்தால்"},
+      {"en": "Polished", "ta": "பளபளப்பாக்கப்பட்டது"},
+      {"en": "Cleaned", "ta": "சுத்தம் செய்யப்பட்டது"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set2_q8",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Which tool is used to find direction?", "ta": "திசையை கண்டறிய எந்த கருவி பயன்படுத்தப்படுகிறது?"},
+    "options": [
+      {"en": "Balance", "ta": "தராசு"},
+      {"en": "Ruler", "ta": "அளவுகோல்"},
+      {"en": "Bulb", "ta": "விளக்கு"},
+      {"en": "Compass", "ta": "திசைகாட்டி"}
+    ],
+    "answerIndex": 3
+  },
+  {
+    "id": "phy6_set2_q9",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Which one is a fuel?", "ta": "எது எரிபொருள்?"},
+    "options": [
+      {"en": "Stone", "ta": "கல்"},
+      {"en": "Petrol", "ta": "பெட்ரோல்"},
+      {"en": "Sand", "ta": "மண்"},
+      {"en": "Paper", "ta": "காகிதம்"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set2_q10",
+    "difficulty": "moderate",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Speed depends on", "ta": "வேகம் எதற்கு சார்ந்துள்ளது?"},
+    "options": [
+      {"en": "Mass and Volume", "ta": "தொகை மற்றும் அளவு"},
+      {"en": "Distance and Time", "ta": "தூரம் மற்றும் நேரம்"},
+      {"en": "Light and Heat", "ta": "ஒளி மற்றும் வெப்பம்"},
+      {"en": "Weight and Height", "ta": "எடை மற்றும் உயரம்"}
+    ],
+    "answerIndex": 1
+  },
+
+  {
+    "id": "phy6_set3_q1",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Which material is attracted by a magnet?", "ta": "எந்த பொருள் காந்தத்தால் ஈர்க்கப்படும்?"},
+    "options": [
+      {"en": "Paper", "ta": "காகிதம்"},
+      {"en": "Iron nail", "ta": "உலோக நகம்"},
+      {"en": "Plastic", "ta": "பிளாஸ்டிக்"},
+      {"en": "Wood", "ta": "மரம்"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set3_q2",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Which one is a natural magnet?", "ta": "எது இயற்கை காந்தம்?"},
+    "options": [
+      {"en": "Copper", "ta": "தாமிரம்"},
+      {"en": "Magnetite", "ta": "காந்தக்கல்"},
+      {"en": "Gold", "ta": "தங்கம்"},
+      {"en": "Silver", "ta": "வெள்ளி"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set3_q3",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Like poles of a magnet", "ta": "ஒரே காந்த துருவங்கள்"},
+    "options": [
+      {"en": "Mix", "ta": "கலப்பு"},
+      {"en": "Repel", "ta": "வெறுக்கும்"},
+      {"en": "Vanish", "ta": "அழியும்"},
+      {"en": "Attract", "ta": "ஈர்க்கும்"}
+    ],
+    "answerIndex": 1
+  },
+  {
+    "id": "phy6_set3_q4",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Unlike poles of a magnet", "ta": "வேறு காந்த துருவங்கள்"},
+    "options": [
+      {"en": "Attract", "ta": "ஈர்க்கும்"},
+      {"en": "Repel", "ta": "வெறுக்கும்"},
+      {"en": "Nothing", "ta": "எதுவும் இல்லை"},
+      {"en": "Dance", "ta": "ஆடும்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set3_q5",
+    "difficulty": "moderate",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "The SI unit of pressure is", "ta": "அழுத்தத்தின் எஸ்.ஐ அலகு எது?"},
+    "options": [
+      {"en": "Pascal", "ta": "பாஸ்கல்"},
+      {"en": "Newton", "ta": "நியூட்டன்"},
+      {"en": "Joule", "ta": "ஜூல்"},
+      {"en": "Watt", "ta": "வாட்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set3_q6",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Which instrument is used to see time?", "ta": "நேரத்தை பார்க்க எது பயன்படுகிறது?"},
+    "options": [
+      {"en": "Clock", "ta": "கடிகாரம்"},
+      {"en": "Balance", "ta": "தராசு"},
+      {"en": "Bulb", "ta": "விளக்கு"},
+      {"en": "Scale", "ta": "அளவுகோல்"}
+    ],
+    "answerIndex": 0
+  },
+  {
+    "id": "phy6_set3_q7",
+    "difficulty": "moderate",
+    "grade": "Grade 6",
+    "subject": "physics",
+    "text": {"en": "Water boils at", "ta": "நீர் எந்த வெப்பநிலையில் கொதிக்கிறது?"},
     "options": [
       {"en": "25°C", "ta": "25°C"},
       {"en": "10°C", "ta": "10°C"},
@@ -119,398 +380,47 @@
     "answerIndex": 3
   },
   {
-    "id": "phy6_set1_q8",
-    "difficulty": "moderate",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which one shows uniform motion?",
-      "ta": "எது ஒரே மாதிரியான இயக்கத்தை காட்டுகிறது?"
-    },
-    "options": [
-      {"en": "Man running fast then slow", "ta": "ஆண் வேகமாக பின்னர் மெதுவாக ஓடுகிறான்"},
-      {"en": "Car stopping in traffic", "ta": "கார் போக்குவரத்து நிற்கிறது"},
-      {"en": "Dog moving zig-zag", "ta": "நாய் சிக்சாக நகர்கிறது"},
-      {"en": "Fan rotating at same speed", "ta": "ஒரே வேகத்தில் சுழலும் விசிறி"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "phy6_set1_q9",
-    "difficulty": "moderate",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Why do railway tracks have gaps?",
-      "ta": "உலகரயின் ரயில்பாதைகளில் இடைவெளிகள் ஏன் உள்ளன?"
-    },
-    "options": [
-      {"en": "For beauty", "ta": "அழகுக்காக"},
-      {"en": "To make noise", "ta": "சத்தம் உண்டாக்க"},
-      {"en": "To save iron", "ta": "உலோகம் சேமிக்க"},
-      {"en": "To allow expansion in heat", "ta": "வெப்பத்தில் விரிவாக்கம் ஏற்பட அனுமதிக்க"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "phy6_set1_q10",
-    "difficulty": "moderate",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Magnetism is a",
-      "ta": "காந்தவியல் என்பது"
-    },
-    "options": [
-      {"en": "Light force", "ta": "ஒளி சக்தி"},
-      {"en": "Contact force", "ta": "தொடர்பு சக்தி"},
-      {"en": "Sound force", "ta": "ஒலி சக்தி"},
-      {"en": "Non-contact force", "ta": "தொடர்பில்லா சக்தி"}
-    ],
-    "answerIndex": 3
-  },
-
-  {
-    "id": "phy6_set2_q1",
+    "id": "phy6_set3_q8",
     "difficulty": "beginner",
     "grade": "Grade 6",
     "subject": "physics",
-    "text": {
-      "en": "Which one shows time?",
-      "ta": "எது நேரத்தை காட்டுகிறது?"
-    },
+    "text": {"en": "Which gas do we need to live?", "ta": "வாழ்வதற்கு எது தேவையான வாயு?"},
     "options": [
-      {"en": "2 kg", "ta": "2 கிலோ"},
-      {"en": "2 metre", "ta": "2 மீட்டர்"},
-      {"en": "2 hours", "ta": "2 மணி"},
-      {"en": "2 litre", "ta": "2 லிட்டர்"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set2_q2",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which material is attracted by a magnet?",
-      "ta": "எந்த பொருள் காந்தத்தால் ஈர்க்கப்படுகிறது?"
-    },
-    "options": [
-      {"en": "Plastic", "ta": "பிளாஸ்டிக்"},
-      {"en": "Wood", "ta": "மரம்"},
-      {"en": "Iron nail", "ta": "உலிநகம்"},
-      {"en": "Paper", "ta": "காகிதம்"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set2_q3",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which one is used to see time?",
-      "ta": "நேரத்தை பார்க்க எதை பயன்படுத்துகிறோம்?"
-    },
-    "options": [
-      {"en": "Scale", "ta": "அளவுகோல்"},
-      {"en": "Balance", "ta": "தராசு"},
-      {"en": "Bulb", "ta": "விளக்கு"},
-      {"en": "Clock", "ta": "கடிகாரம்"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "phy6_set2_q4",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which tool is used to find direction?",
-      "ta": "திசையை கண்டுபிட எது பயன்படுத்தப்படுகிறது?"
-    },
-    "options": [
-      {"en": "Compass", "ta": "காம்பஸ்"},
-      {"en": "Balance", "ta": "சரிபோலன்ஸ்"},
-      {"en": "Ruler", "ta": "கோல்"},
-      {"en": "Bulb", "ta": "விளக்கு"}
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": "phy6_set2_q5",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which gas do we need to live?",
-      "ta": "நாம் உயிருடன் இருக்க எந்த வாயு தேவை?"
-    },
-    "options": [
+      {"en": "Oxygen", "ta": "ஆக்சிஜன்"},
+      {"en": "Nitrogen", "ta": "நைட்ரஜன்"},
       {"en": "Smoke", "ta": "புகை"},
-      {"en": "Nitrogen", "ta": "நைட்ரஜன்"},
-      {"en": "Oxygen", "ta": "ஆக்சிஜன்"},
       {"en": "Carbon dioxide", "ta": "கார்பன் டைஆக்சைடு"}
     ],
-    "answerIndex": 2
+    "answerIndex": 0
   },
   {
-    "id": "phy6_set2_q6",
+    "id": "phy6_set3_q9",
     "difficulty": "beginner",
     "grade": "Grade 6",
     "subject": "physics",
-    "text": {
-      "en": "Which one is used to check temperature?",
-      "ta": "எதை பயன்படுத்தி வெப்பநிலையை பரிசோதிக்கிறோம்?"
-    },
+    "text": {"en": "A magnet has", "ta": "ஒரு காந்தத்திற்குக் கிடைப்பது"},
     "options": [
-      {"en": "Scale", "ta": "அளவுகோல்"},
-      {"en": "Thermometer", "ta": "வெப்பமோட்டர்"},
-      {"en": "Clock", "ta": "மணி"},
-      {"en": "Bulb", "ta": "விளக்கு"}
+      {"en": "Two poles", "ta": "இரு துருவங்கள்"},
+      {"en": "Three poles", "ta": "மூன்று துருவங்கள்"},
+      {"en": "One pole", "ta": "ஒரு துருவம்"},
+      {"en": "No pole", "ta": "துருவமில்லை"}
     ],
-    "answerIndex": 1
+    "answerIndex": 0
   },
   {
-    "id": "phy6_set2_q7",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Like poles of a magnet",
-      "ta": "ஒரே காந்த துறைகள்"
-    },
-    "options": [
-      {"en": "Attract", "ta": "ஈர்க்கும்"},
-      {"en": "Vanish", "ta": "இல்லை"},
-      {"en": "Repel", "ta": "தள்ளுகிறது"},
-      {"en": "Mix", "ta": "கலக்கும்"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set2_q8",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which one glows with electricity?",
-      "ta": "எது மின்னெழுத்துடன் பிரகாசிக்கிறது?"
-    },
-    "options": [
-      {"en": "Ball", "ta": "பந்து"},
-      {"en": "Book", "ta": "புத்தகம்"},
-      {"en": "Chair", "ta": "நாற்காலி"},
-      {"en": "Bulb", "ta": "விளக்கு"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "phy6_set2_q9",
+    "id": "phy6_set3_q10",
     "difficulty": "moderate",
     "grade": "Grade 6",
     "subject": "physics",
-    "text": {
-      "en": "Speed depends on",
-      "ta": "வேகம் எதற்குப் பொருந்துகிறது?"
-    },
+    "text": {"en": "The unit of power of a bulb is", "ta": "விளக்கின் சக்தியின் அலகு எது?"},
     "options": [
-      {"en": "Light and Heat", "ta": "ஒளி மற்றும் வெப்பம்"},
-      {"en": "Weight and Height", "ta": "எடை மற்றும் உயரம்"},
-      {"en": "Distance and Time", "ta": "தூரம் மற்றும் நேரம்"},
-      {"en": "Mass and Volume", "ta": "எடை மற்றும் அளவு"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set2_q10",
-    "difficulty": "moderate",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "A freely suspended magnet rests in",
-      "ta": "சுதந்திரமாக தொங்கிய காந்தம் எங்கும் அமைக்கிறது?"
-    },
-    "options": [
-      {"en": "Round direction", "ta": "சுற்று திசை"},
-      {"en": "East-West direction", "ta": "கிழக்கு-மேற்கு திசை"},
-      {"en": "Up-Down direction", "ta": "மேல்-கீழ் திசை"},
-      {"en": "North-South direction", "ta": "வடக்கு-தெற்கு திசை"}
-    ],
-    "answerIndex": 3
-  },
-
-  {
-    "id": "phy6_set3_q1",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which one is a fuel?",
-      "ta": "எது எரிபொருள்?"
-    },
-    "options": [
-      {"en": "Petrol", "ta": "பெட்ரோல்"},
-      {"en": "Stone", "ta": "கல்"},
-      {"en": "Paper", "ta": "காகிதம்"},
-      {"en": "Sand", "ta": "மண்"}
+      {"en": "Watt", "ta": "வாட்"},
+      {"en": "Pascal", "ta": "பாஸ்கல்"},
+      {"en": "Joule", "ta": "ஜூல்"},
+      {"en": "Newton", "ta": "நியூட்டன்"}
     ],
     "answerIndex": 0
   },
-  {
-    "id": "phy6_set3_q2",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "A magnet has",
-      "ta": "ஒரு காந்தத்திற்கு உள்ளது"
-    },
-    "options": [
-      {"en": "No pole", "ta": "துறை இல்லை"},
-      {"en": "Two poles", "ta": "இரு துறைகள்"},
-      {"en": "Three poles", "ta": "மூன்று துறைகள்"},
-      {"en": "One pole", "ta": "ஒரு துறை"}
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": "phy6_set3_q3",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Which gas is most in the air?",
-      "ta": "வானிலில் அதிகமாக இருக்கும் வாயு எது?"
-    },
-    "options": [
-      {"en": "Helium", "ta": "ஹீலியம்"},
-      {"en": "Oxygen", "ta": "ஆக்சிஜன்"},
-      {"en": "Nitrogen", "ta": "நைட்ரஜன்"},
-      {"en": "Carbon dioxide", "ta": "கார்பன் டைஆக்சைடு"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set3_q4",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "Unlike poles of a magnet",
-      "ta": "விரோத காந்த துறைகள்"
-    },
-    "options": [
-      {"en": "Dance", "ta": "இல்லை"},
-      {"en": "Repel", "ta": "தள்ளுகிறது"},
-      {"en": "Attract", "ta": "உற்சோதனை செய்கிறது"},
-      {"en": "Nothing", "ta": "எதுவும் இல்லை"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "phy6_set3_q5",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "At what temperature does water freeze?",
-      "ta": "நீர் எத்தனை டிகிரி செல்சியஸ் வெள்ளையாகும்?"
-    },
-    "options": [
-      {"en": "0°C", "ta": "0°C"},
-      {"en": "100°C", "ta": "100°C"},
-      {"en": "50°C", "ta": "50°C"},
-      {"en": "10°C", "ta": "10°C"}
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": "phy6_set3_q6",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "What attracts iron objects without touching them?",
-      "ta": "தொட்டாமல் எரும்புப் பொருட்களை ஈர்க்கும் வான்மை எது?"
-    },
-    "options": [
-      {"en": "Magnet", "ta": "காந்தம்"},
-      {"en": "Water", "ta": "தண்ணீர்"},
-      {"en": "Sun", "ta": "சூரியன்"},
-      {"en": "Air", "ta": "காற்று"}
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": "phy6_set3_q7",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "physics",
-    "text": {
-      "en": "What do we drink to stay alive?",
-      "ta": "வாழ்ந்து இருக்க நாம்போகும் எது?"
-    },
-    "options": [
-      {"en": "Water", "ta": "தண்ணீர்"},
-      {"en": "Oil", "ta": "எண்ணெய்"},
-      {"en": "Milk", "ta": "பால்"},
-      {"en": "Juice", "ta": "ஜூஸ்"}
-    ],
-    "answerIndex": 0
-  },
-  {
-      "id": "phy6_set3_q8",
-      "difficulty": "beginner",
-      "grade": "Grade 6",
-      "subject": "physics",
-      "text": {
-        "en": "What do we feel when we touch something hot?",
-        "ta": "நம்மால் சூடான ஒன்றைத் தொடும் போது நாம் என்ன உணர்கிறோம்?"
-      },
-      "options": [
-        {"en": "Cold", "ta": "குளிர்ச்சி"},
-        {"en": "Hot", "ta": "சூடு"},
-        {"en": "Soft", "ta": "மென்மை"},
-        {"en": "Hard", "ta": "கடுமை"}
-      ],
-      "answerIndex": 1
-    },
-    {
-      "id": "phy6_set3_q9",
-      "difficulty": "beginner",
-      "grade": "Grade 6",
-      "subject": "physics",
-      "text": {
-        "en": "Which direction does water flow naturally?",
-        "ta": "நீர்வழக்கம் இயற்கையாக எந்தப் பக்கம் ஓடுகிறது?"
-      },
-      "options": [
-        {"en": "Upwards", "ta": "மேலே"},
-        {"en": "Downwards", "ta": "கீழே"},
-        {"en": "Sideways", "ta": "பக்கமாக"},
-        {"en": "Does not move", "ta": "செயல்படாது"}
-      ],
-      "answerIndex": 1
-  },
-  {
-      "id": "phy6_set3_q10",
-      "difficulty": "beginner",
-      "grade": "Grade 6",
-      "subject": "physics",
-      "text": {
-        "en": "What do we use to see things far away clearly?",
-        "ta": "தூரத்தில் உள்ளவற்றை தெளிவாக பார்க்க நாம் எதைப் பயன்படுத்துகிறோம்?"
-      },
-      "options": [
-        {"en": "Microscope", "ta": "நுண்காணி"},
-        {"en": "Telescope", "ta": "தூரக்காணி"},
-        {"en": "Magnifying glass", "ta": "பூதக்கண்ணாடி"},
-        {"en": "Mirror", "ta": "கண்ணாடி"}
-      ],
-      "answerIndex": 1
-  }, 
   {
     "id": "chem6_set1_q1",
     "difficulty": "beginner",
@@ -1032,7 +942,7 @@
     },
     "options": [
       {"en": "Chair", "ta": "நாற்காலி"},
-      {"en": "Car", "ta": "கார்"},
+      {"en": "Car", "ta": "மகிழுந்து"},
       {"en": "Stone", "ta": "கல்"},
       {"en": "Dog", "ta": "நாய்"}
     ],
@@ -1082,7 +992,7 @@
       "ta": "மரம் உணவை தயாரிக்கும் போது பயன்படுத்துவது"
     },
     "options": [
-      {"en": "Torchlight", "ta": "தீ விளக்கு"},
+      {"en": "Torchlight", "ta": "கைவிளக்கு"},
       {"en": "Moonlight", "ta": "சந்திர ஒளி"},
       {"en": "Candle", "ta": "விளக்கு"},
       {"en": "Sunlight", "ta": "சூரிய ஒளி"}
@@ -1191,192 +1101,192 @@
     ],
     "answerIndex": 3
   },
-  {
-    "id": "bio6_set2_q1",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "biology",
-    "text": {
-      "en": "The organ that pumps blood is",
-      "ta": "இரத்தத்தை தள்ளும் உறுப்பானது"
+    {
+      "id": "bio6_set2_q1",
+      "difficulty": "beginner",
+      "grade": "Grade 6",
+      "subject": "biology",
+      "text": {
+        "en": "We breathe in",
+        "ta": "நாம் சுவாசிக்கும் வாயு"
+      },
+      "options": [
+        {"en": "Nitrogen", "ta": "நைட்ரஜன்"},
+        {"en": "Smoke", "ta": "புகை"},
+        {"en": "Carbon dioxide", "ta": "கார்பன் டை ஆக்சைடு"},
+        {"en": "Oxygen", "ta": "ஆக்சிஜன்"}
+      ],
+      "answerIndex": 3
     },
-    "options": [
-      {"en": "Stomach", "ta": "உணவுக்குடல்"},
-      {"en": "Brain", "ta": "மூளை"},
-      {"en": "Heart", "ta": "இதயம்"},
-      {"en": "Lung", "ta": "நுரையீரல்"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "bio6_set2_q2",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "biology",
-    "text": {
-      "en": "The organ that controls the body is",
-      "ta": "உடலை கட்டுப்படுத்தும் உறுப்பானது"
+    {
+      "id": "bio6_set2_q2",
+      "difficulty": "moderate",
+      "grade": "Grade 6",
+      "subject": "biology",
+      "text": {
+        "en": "Which organ purifies blood?",
+        "ta": "எந்த உறுப்பானது இரத்தத்தை சுத்தம் செய்கிறது?"
+      },
+      "options": [
+        {"en": "Stomach", "ta": "உணவுக்குடல்"},
+        {"en": "Kidney", "ta": "சிறுநீரகம்"},
+        {"en": "Lung", "ta": "நுரையீரல்"},
+        {"en": "Heart", "ta": "இதயம்"}
+      ],
+      "answerIndex": 1
     },
-    "options": [
-      {"en": "Heart", "ta": "இதயம்"},
-      {"en": "Kidney", "ta": "கிட்னி"},
-      {"en": "Lung", "ta": "நுரையீரல்"},
-      {"en": "Brain", "ta": "மூளை"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "bio6_set2_q3",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "biology",
-    "text": {
-      "en": "We breathe in",
-      "ta": "நாம் சுவாசிக்கும் வாயு"
+    {
+      "id": "bio6_set2_q3",
+      "difficulty": "beginner",
+      "grade": "Grade 6",
+      "subject": "biology",
+      "text": {
+        "en": "The organ that helps us to hear is",
+        "ta": "நாம் கேட்க உதவும் உறுப்பானது"
+      },
+      "options": [
+        {"en": "Tongue", "ta": "நாக்கு"},
+        {"en": "Ear", "ta": "காது"},
+        {"en": "Nose", "ta": "மூக்கு"},
+        {"en": "Eye", "ta": "கண்"}
+      ],
+      "answerIndex": 1
     },
-    "options": [
-      {"en": "Nitrogen", "ta": "நைட்ரஜன்"},
-      {"en": "Smoke", "ta": "புகை"},
-      {"en": "Carbon dioxide", "ta": "கார்பன் டை ஆக்சைடு"},
-      {"en": "Oxygen", "ta": "ஆக்சிஜன்"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "bio6_set2_q4",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "biology",
-    "text": {
-      "en": "We breathe out",
-      "ta": "நாம் வெளியே தள்ளும் வாயு"
+    {
+      "id": "bio6_set2_q4",
+      "difficulty": "beginner",
+      "grade": "Grade 6",
+      "subject": "biology",
+      "text": {
+        "en": "We breathe out",
+        "ta": "நாம் வெளியே தள்ளும் வாயு"
+      },
+      "options": [
+        {"en": "Nitrogen", "ta": "நைட்ரஜன்"},
+        {"en": "Oxygen", "ta": "ஆக்சிஜன்"},
+        {"en": "Carbon dioxide", "ta": "கார்பன் டை ஆக்சைடு"},
+        {"en": "Hydrogen", "ta": "ஹைட்ரஜன்"}
+      ],
+      "answerIndex": 2
     },
-    "options": [
-      {"en": "Nitrogen", "ta": "நைட்ரஜன்"},
-      {"en": "Oxygen", "ta": "ஆக்சிஜன்"},
-      {"en": "Carbon dioxide", "ta": "கார்பன் டை ஆக்சைடு"},
-      {"en": "Hydrogen", "ta": "ஹைட்ரஜன்"}
-    ],
-    "answerIndex": 2
-  },
-  {
-    "id": "bio6_set2_q5",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "biology",
-    "text": {
-      "en": "The organ that helps us to see is",
-      "ta": "நாம் பார்ப்பதற்கு உதவும் உறுப்பானது"
+    {
+      "id": "bio6_set2_q5",
+      "difficulty": "beginner",
+      "grade": "Grade 6",
+      "subject": "biology",
+      "text": {
+        "en": "The organ that helps us to taste is",
+        "ta": "நாம் சுவைக்க உதவும் உறுப்பானது"
+      },
+      "options": [
+        {"en": "Hand", "ta": "கை"},
+        {"en": "Nose", "ta": "மூக்கு"},
+        {"en": "Eye", "ta": "கண்"},
+        {"en": "Tongue", "ta": "நாக்கு"}
+      ],
+      "answerIndex": 3
     },
-    "options": [
-      {"en": "Nose", "ta": "மூக்கு"},
-      {"en": "Tongue", "ta": "நாக்கு"},
-      {"en": "Ear", "ta": "காது"},
-      {"en": "Eye", "ta": "கண்"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "bio6_set2_q6",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "biology",
-    "text": {
-      "en": "The organ that helps us to hear is",
-      "ta": "நாம் கேட்க உதவும் உறுப்பானது"
+    {
+      "id": "bio6_set2_q6",
+      "difficulty": "beginner",
+      "grade": "Grade 6",
+      "subject": "biology",
+      "text": {
+        "en": "The organ that controls the body is",
+        "ta": "உடலை கட்டுப்படுத்தும் உறுப்பானது"
+      },
+      "options": [
+        {"en": "Heart", "ta": "இதயம்"},
+        {"en": "Kidney", "ta": "சிறுநீரகம்"},
+        {"en": "Lung", "ta": "நுரையீரல்"},
+        {"en": "Brain", "ta": "மூளை"}
+      ],
+      "answerIndex": 3
     },
-    "options": [
-      {"en": "Tongue", "ta": "நாக்கு"},
-      {"en": "Ear", "ta": "காது"},
-      {"en": "Nose", "ta": "மூக்கு"},
-      {"en": "Eye", "ta": "கண்"}
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": "bio6_set2_q7",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "biology",
-    "text": {
-      "en": "The organ that helps us to taste is",
-      "ta": "நாம் சுவைக்க உதவும் உறுப்பானது"
+    {
+      "id": "bio6_set2_q7",
+      "difficulty": "beginner",
+      "grade": "Grade 6",
+      "subject": "biology",
+      "text": {
+        "en": "The organ that helps us to see is",
+        "ta": "நாம் பார்ப்பதற்கு உதவும் உறுப்பானது"
+      },
+      "options": [
+        {"en": "Nose", "ta": "மூக்கு"},
+        {"en": "Tongue", "ta": "நாக்கு"},
+        {"en": "Ear", "ta": "காது"},
+        {"en": "Eye", "ta": "கண்"}
+      ],
+      "answerIndex": 3
     },
-    "options": [
-      {"en": "Hand", "ta": "கை"},
-      {"en": "Nose", "ta": "மூக்கு"},
-      {"en": "Eye", "ta": "கண்"},
-      {"en": "Tongue", "ta": "நாக்கு"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "bio6_set2_q8",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "biology",
-    "text": {
-      "en": "The organ that helps us to smell is",
-      "ta": "நாம் வாசிக்க உதவும் உறுப்பானது"
+    {
+      "id": "bio6_set2_q8",
+      "difficulty": "beginner",
+      "grade": "Grade 6",
+      "subject": "biology",
+      "text": {
+        "en": "The organ that pumps blood is",
+        "ta": "இரத்தத்தை தள்ளும் உறுப்பானது"
+      },
+      "options": [
+        {"en": "Stomach", "ta": "உணவுக்குடல்"},
+        {"en": "Brain", "ta": "மூளை"},
+        {"en": "Heart", "ta": "இதயம்"},
+        {"en": "Lung", "ta": "நுரையீரல்"}
+      ],
+      "answerIndex": 2
     },
-    "options": [
-      {"en": "Nose", "ta": "மூக்கு"},
-      {"en": "Eye", "ta": "கண்"},
-      {"en": "Hand", "ta": "கை"},
-      {"en": "Ear", "ta": "காது"}
-    ],
-    "answerIndex": 0
-  },
-  {
-    "id": "bio6_set2_q9",
-    "difficulty": "moderate",
-    "grade": "Grade 6",
-    "subject": "biology",
-    "text": {
-      "en": "Which organ purifies blood?",
-      "ta": "எந்த உறுப்பானது இரத்தத்தை சுத்தம் செய்கிறது?"
+    {
+      "id": "bio6_set2_q9",
+      "difficulty": "beginner",
+      "grade": "Grade 6",
+      "subject": "biology",
+      "text": {
+        "en": "The organ that helps us to smell is",
+        "ta": "நாம் வாசிக்க உதவும் உறுப்பானது"
+      },
+      "options": [
+        {"en": "Nose", "ta": "மூக்கு"},
+        {"en": "Eye", "ta": "கண்"},
+        {"en": "Hand", "ta": "கை"},
+        {"en": "Ear", "ta": "காது"}
+      ],
+      "answerIndex": 0
     },
-    "options": [
-      {"en": "Stomach", "ta": "உணவுக்குடல்"},
-      {"en": "Kidney", "ta": "சிறுநீரகம்"},
-      {"en": "Lung", "ta": "நுரையீரல்"},
-      {"en": "Heart", "ta": "இதயம்"}
-    ],
-    "answerIndex": 1
-  },
-  {
-    "id": "bio6_set2_q10",
-    "difficulty": "moderate",
-    "grade": "Grade 6",
-    "subject": "biology",
-    "text": {
-      "en": "Which organ helps in digestion of food?",
-      "ta": "உணவு செரிமானத்திற்கு உதவும் உறுப்பானது"
+    {
+      "id": "bio6_set2_q10",
+      "difficulty": "moderate",
+      "grade": "Grade 6",
+      "subject": "biology",
+      "text": {
+        "en": "Which organ helps in digestion of food?",
+        "ta": "உணவு செரிமானத்திற்கு உதவும் உறுப்பானது"
+      },
+      "options": [
+        {"en": "Brain", "ta": "மூளை"},
+        {"en": "Heart", "ta": "இதயம்"},
+        {"en": "Stomach", "ta": "உணவுக்குடல்"},
+        {"en": "Kidney", "ta": "சிறுநீரகம்"}
+      ],
+      "answerIndex": 2
     },
-    "options": [
-      {"en": "Brain", "ta": "மூளை"},
-      {"en": "Heart", "ta": "இதயம்"},
-      {"en": "Stomach", "ta": "உணவுக்குடல்"},
-      {"en": "Kidney", "ta": "சிறுநீரகம்"}
-    ],
-    "answerIndex": 2
-  },
   {
     "id": "bio6_set3_q1",
     "difficulty": "beginner",
     "grade": "Grade 6",
     "subject": "biology",
     "text": {
-      "en": "Cow gives us",
-      "ta": "மாடு எதை நமக்கு தருகிறது?"
+      "en": "Which one lives in water?",
+      "ta": "எது நீரில் வாழ்கிறது?"
     },
     "options": [
-      {"en": "Honey", "ta": "தேன்"},
-      {"en": "Wool", "ta": "நுண்ணார்"},
-      {"en": "Milk", "ta": "பால்"},
-      {"en": "Egg", "ta": "முட்டை"}
+      {"en": "Dog", "ta": "நாய்"},
+      {"en": "Cat", "ta": "பூனை"},
+      {"en": "Tiger", "ta": "புலி"},
+      {"en": "Fish", "ta": "மீன்"}
     ],
-    "answerIndex": 2
+    "answerIndex": 3
   },
   {
     "id": "bio6_set3_q2",
@@ -1401,16 +1311,16 @@
     "grade": "Grade 6",
     "subject": "biology",
     "text": {
-      "en": "Sheep gives us",
-      "ta": "ஆடு எதை நமக்கு தருகிறது?"
+      "en": "Which one can fly?",
+      "ta": "எது பறக்க முடியும்?"
     },
     "options": [
-      {"en": "Wool", "ta": "நுண்ணார்"},
-      {"en": "Egg", "ta": "முட்டை"},
-      {"en": "Honey", "ta": "தேன்"},
-      {"en": "Milk", "ta": "பால்"}
+      {"en": "Sheep", "ta": "ஆடு"},
+      {"en": "Dog", "ta": "நாய்"},
+      {"en": "Bird", "ta": "பறவை"},
+      {"en": "Cow", "ta": "மாடு"}
     ],
-    "answerIndex": 0
+    "answerIndex": 2
   },
   {
     "id": "bio6_set3_q4",
@@ -1418,36 +1328,19 @@
     "grade": "Grade 6",
     "subject": "biology",
     "text": {
-      "en": "Honeybee gives us",
-      "ta": "தேன் தேனீ எதை நமக்கு தருகிறது?"
+      "en": "Cow gives us",
+      "ta": "மாடு எதை நமக்கு தருகிறது?"
     },
     "options": [
+      {"en": "Honey", "ta": "தேன்"},
       {"en": "Wool", "ta": "நுண்ணார்"},
-      {"en": "Egg", "ta": "முட்டை"},
       {"en": "Milk", "ta": "பால்"},
-      {"en": "Honey", "ta": "தேன்"}
-    ],
-    "answerIndex": 3
-  },
-  {
-    "id": "bio6_set3_q5",
-    "difficulty": "beginner",
-    "grade": "Grade 6",
-    "subject": "biology",
-    "text": {
-      "en": "Which one is a domestic animal?",
-      "ta": "எது வீட்டுப் பறவையோடு அல்லது வீட்டுப் விலங்கோடு சார்ந்தது?"
-    },
-    "options": [
-      {"en": "Tiger", "ta": "புலி"},
-      {"en": "Deer", "ta": "மான்"},
-      {"en": "Cow", "ta": "மாடு"},
-      {"en": "Lion", "ta": "சிங்கம்"}
+      {"en": "Egg", "ta": "முட்டை"}
     ],
     "answerIndex": 2
   },
   {
-    "id": "bio6_set3_q6",
+    "id": "bio6_set3_q5",
     "difficulty": "beginner",
     "grade": "Grade 6",
     "subject": "biology",
@@ -1464,21 +1357,38 @@
     "answerIndex": 3
   },
   {
+    "id": "bio6_set3_q6",
+    "difficulty": "beginner",
+    "grade": "Grade 6",
+    "subject": "biology",
+    "text": {
+      "en": "Sheep gives us",
+      "ta": "ஆடு எதை நமக்கு தருகிறது?"
+    },
+    "options": [
+      {"en": "Wool", "ta": "நுண்ணார்"},
+      {"en": "Egg", "ta": "முட்டை"},
+      {"en": "Honey", "ta": "தேன்"},
+      {"en": "Milk", "ta": "பால்"}
+    ],
+    "answerIndex": 0
+  },
+  {
     "id": "bio6_set3_q7",
     "difficulty": "beginner",
     "grade": "Grade 6",
     "subject": "biology",
     "text": {
-      "en": "Which one lives in water?",
-      "ta": "எது நீரில் வாழ்கிறது?"
+      "en": "Which one is a domestic animal?",
+      "ta": "எது வீட்டுப் பறவையோடு அல்லது வீட்டுப் விலங்கோடு சார்ந்தது?"
     },
     "options": [
-      {"en": "Dog", "ta": "நாய்"},
-      {"en": "Cat", "ta": "பூனை"},
       {"en": "Tiger", "ta": "புலி"},
-      {"en": "Fish", "ta": "மீன்"}
+      {"en": "Deer", "ta": "மான்"},
+      {"en": "Cow", "ta": "மாடு"},
+      {"en": "Lion", "ta": "சிங்கம்"}
     ],
-    "answerIndex": 3
+    "answerIndex": 2
   },
   {
     "id": "bio6_set3_q8",
@@ -1486,16 +1396,16 @@
     "grade": "Grade 6",
     "subject": "biology",
     "text": {
-      "en": "Which one can fly?",
-      "ta": "எது பறக்க முடியும்?"
+      "en": "Honeybee gives us",
+      "ta": "தேன் தேனீ எதை நமக்கு தருகிறது?"
     },
     "options": [
-      {"en": "Sheep", "ta": "ஆடு"},
-      {"en": "Dog", "ta": "நாய்"},
-      {"en": "Bird", "ta": "பறவை"},
-      {"en": "Cow", "ta": "மாடு"}
+      {"en": "Wool", "ta": "நுண்ணார்"},
+      {"en": "Egg", "ta": "முட்டை"},
+      {"en": "Milk", "ta": "பால்"},
+      {"en": "Honey", "ta": "தேன்"}
     ],
-    "answerIndex": 2
+    "answerIndex": 3
   },
   {
     "id": "bio6_set3_q9",
@@ -2187,8 +2097,8 @@
       "ta": "இதில் எது மனிதனால் செய்யப்பட்ட நார்?"
     },
     "options": [
-      {"en": "Cotton", "ta": "பட்டு"},
-      {"en": "Silk", "ta": "சில்க்"},
+      {"en": "Cotton", "ta": "பருத்தி"},
+      {"en": "Silk", "ta": "பட்டு"},
       {"en": "Nylon", "ta": "நைலான்"},
       {"en": "Wool", "ta": "கம்பளி"}
     ],
@@ -2462,7 +2372,7 @@
       {"en": "Sand", "ta": "மணல்"},
       {"en": "Stone", "ta": "கல்"},
       {"en": "Sugar", "ta": "சர்க்கரை"},
-      {"en": "Wood", "ta": "மரம்"}
+      {"en": "Wood", "ta": "கட்டை"}
     ],
     "answerIndex": 2
   },
@@ -2766,7 +2676,7 @@
     },
     "options": [
       {"en": "Lungs", "ta": "நுரையீரல்"},
-      {"en": "Stomach", "ta": "குடல்"},
+      {"en": "Stomach", "ta": "வயிறு"},
       {"en": "Kidney", "ta": "சிறுநீரகம்"},
       {"en": "Heart", "ta": "இதயம்"}
     ],
@@ -3410,10 +3320,10 @@
         "ta": "ஒளியின் வேகம் சுமார் எவ்வளவு?"
       },
       "options": [
-        {"en": "3 × 10³ m/s", "ta": "3 × 10³ மீ/வினா"},
-        {"en": "3 × 10⁶ m/s", "ta": "3 × 10⁶ மீ/வினா"},
-        {"en": "3 × 10⁵ m/s", "ta": "3 × 10⁵ மீ/வினா"},
-        {"en": "3 × 10⁸ m/s", "ta": "3 × 10⁸ மீ/வினா"}
+        {"en": "3 × 10³ m/s", "ta": "3 × 10³ மீ/வி"},
+        {"en": "3 × 10⁶ m/s", "ta": "3 × 10⁶ மீ/வி"},
+        {"en": "3 × 10⁵ m/s", "ta": "3 × 10⁵ மீ/வி"},
+        {"en": "3 × 10⁸ m/s", "ta": "3 × 10⁸ மீ/வி"}
       ],
       "answerIndex": 3
   },
@@ -6708,10 +6618,10 @@
       "ta": "நியூட்ரல் திணிப்பு மதிப்பெண் என்ன?"
     },
     "options": [
-      {"en": "0", "ta": "0"},
-      {"en": "7", "ta": "7"},
-      {"en": "14", "ta": "14"},
-      {"en": "1", "ta": "1"}
+      {"en": "0", "ta": "பூஜ்ஜியம்"},
+      {"en": "7", "ta": "ஏழு"},
+      {"en": "14", "ta": "பதினான்கு"},
+      {"en": "1", "ta": "ஒன்று"}
     ],
     "answerIndex": 1
   },
@@ -8827,21 +8737,21 @@
       "answerIndex": 1
   },
   {
-      "id": "bio11_set2_q8",
-      "difficulty": "intermediate",
-      "grade": "Grade 11",
-      "subject": "biology",
-      "text": {
-        "en": "The pacemaker of heart is:",
-        "ta": "இதயத்தின் துடிப்பை ஒழுங்குபடுத்தும் இயல்பான “துடிப்பான்” எது?"
-      },
-      "options": [
-        {"en": "AV node", "ta": "AV node"},
-        {"en": "SA node", "ta": "SA node"},
-        {"en": "Purkinje fibres", "ta": "புர்கிஞ்ஜி நார்கள்"},
-        {"en": "Bundle of His", "ta": "ஹிஸ் கட்டு"}
-      ],
-      "answerIndex": 1
+    "id": "bio11_set2_q8",
+    "difficulty": "intermediate",
+    "grade": "Grade 11",
+    "subject": "biology",
+    "text": {
+      "en": "The pacemaker of heart is:",
+      "ta": "இதயத்தின் துடிப்பை ஒழுங்குபடுத்தும் இயல்பான “துடிப்பான்” எது?"
+    },
+    "options": [
+      {"en": "AV node", "ta": "AV முனை"},
+      {"en": "SA node", "ta": "SA முனை"},
+      {"en": "Purkinje fibres", "ta": "புர்கிஞ்ஜி நார்கள்"},
+      {"en": "Bundle of His", "ta": "ஹிஸ் கட்டு"}
+    ],
+    "answerIndex": 1
   },
   {
       "id": "bio11_set2_q9",
@@ -10179,10 +10089,10 @@
       "ta": "டர்னர் சிண்ட்ரோம் எவ்வாறு குறிக்கப்படுகிறது?"
     },
     "options": [
-      {"en": "44 + XXY", "ta": "44 + XXY"},
-      {"en": "44 + XO", "ta": "44 + XO"},
-      {"en": "44 + XXX", "ta": "44 + XXX"},
-      {"en": "44 + XY", "ta": "44 + XY"}
+      {"en": "44 + XXY", "ta": "நாற்பத்தி நான்கு + XXY"},
+      {"en": "44 + XO", "ta": "நாற்பத்தி நான்கு + XO"},
+      {"en": "44 + XXX", "ta": "நாற்பத்தி நான்கு + XXX"},
+      {"en": "44 + XY", "ta": "நாற்பத்தி நான்கு + XY"}
     ],
     "answerIndex": 1
   },
@@ -10537,8 +10447,8 @@
     },
     "options": [
       {"en": "XO", "ta": "XO"},
-      {"en": "Trisomy of 21", "ta": "21வது குரோமோசோமின் மூவட்டை"},
-      {"en": "Trisomy of 18", "ta": "18வது குரோமோசோமின் மூவட்டை"},
+      {"en": "Trisomy of 21", "ta": "21வது குரோமோசோமின் ட்ரிசோமி"},
+      {"en": "Trisomy of 18", "ta": "18வது குரோமோசோமின் ட்ரிசோமி"},
       {"en": "XXY", "ta": "XXY"}
     ],
     "answerIndex": 1
